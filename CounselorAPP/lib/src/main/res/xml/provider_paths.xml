@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path path="com.cesaas.android.counselor.order" name="files_root" />
+    <files-path path="com.cesaas.android.counselor.order" name="files" />
+    <external-path path="." name="url" />
+    <external-path name="external_files" path="."/>
+
+</paths>
