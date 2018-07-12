@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_title_bar" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/kd_send"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_dividing_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/et_order_id"
+            android:layout_width="280dp"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2.0dip"
+            android:background="@color/white"
+            android:digits="@string/register_name_digits"
+            android:focusableInTouchMode="true"
+            android:hint="@string/s_order"
+            android:inputType="number"
+            android:longClickable="false"
+            android:paddingLeft="10dp"
+            android:textColor="@color/c1"
+            android:textColorHint="@color/c3"
+            android:textCursorDrawable="@null"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/tv_scan_sendOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawableTop="@drawable/scan1"
+            android:gravity="center"
+            android:text="@string/scan"
+            android:textColor="@color/rgb_btn_red"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_dividing_line" />
+
+    <ListView
+        android:id="@+id/lv_express"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/rgb_line"
+        android:dividerHeight="1px"
+        android:listSelector="#00000000" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_selector_my_btn_yellow"
+            android:gravity="center"
+            android:text="@string/express_send"
+            android:textColor="@color/c1"
+            android:textSize="16.0sp" 
+            android:visibility="visible"/>
+        <Button
+            android:id="@+id/btn_online"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_selector_my_btn_yellow"
+            android:gravity="center"
+            android:text="@string/online_send"
+            android:textColor="@color/c1"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

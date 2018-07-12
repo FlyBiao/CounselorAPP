@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_app_user_info"
+        android:title="修改密码"
+        android:icon="@mipmap/user_info"/>
+
+    <item
+        android:id="@+id/menu_app_switch_shop"
+        android:title="转店申请"
+        android:icon="@mipmap/exit"/>
+
+    <item
+        android:id="@+id/menu_app_setting"
+        android:title="系统设置"
+        android:icon="@mipmap/setting"/>
+
+    <item
+        android:id="@+id/menu_app_update"
+        android:title="应用更新"
+        android:icon="@mipmap/app_update"/>
+
+    <item
+        android:id="@+id/menu_app_exit"
+        android:title="退出登录"
+        android:icon="@mipmap/exit"/>
+
+</menu>

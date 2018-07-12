@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/dfff"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_title_bar" >
+
+        <LinearLayout
+            android:id="@+id/il_send_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_express_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="店铺管理"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_title_bar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            
+            <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="店铺粉丝"
+                android:gravity="center"
+                android:id="@+id/shop_tab_app"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+            
+             <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="店铺订单"
+                android:id="@+id/shop_tab_game"
+                android:gravity="center"
+               android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_line"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/sanjiao" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/shop_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

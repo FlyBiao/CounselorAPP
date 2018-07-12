@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_show_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View style="@style/common_divider_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_30"
+            android:orientation="horizontal">
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_sku"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_size"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_stock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_zaitu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_inventoryNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+            <TextView
+                android:id="@+id/tv_differenceNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0"/>
+            <View style="@style/common_shuli_divider_line"/>
+        </LinearLayout>
+        <View style="@style/common_divider_line"/>
+
+    </LinearLayout>
+
+</LinearLayout>

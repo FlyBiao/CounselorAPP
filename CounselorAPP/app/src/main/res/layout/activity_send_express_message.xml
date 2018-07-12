@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/base_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_send_message"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/il_send_message_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_back_send"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="物流通知"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout> 
+    
+
+    <LinearLayout
+        android:id="@+id/ll_express"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_send_message"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_user_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16.0dip"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tv_user_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="备注"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/t3" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_express_remark"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="2.0dip"
+            android:paddingTop="10dp"
+            android:background="@drawable/et_remarks_bg"
+            android:gravity="left|top"
+            android:focusableInTouchMode="true"
+            android:hint="请写入备注信息"
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:textColor="@color/c1"
+            android:textColorHint="@color/c3"
+            android:textCursorDrawable="@null"
+            android:textSize="14.0sp" />
+
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_express"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="7dp"
+            android:text="支付方式:"
+            android:textColor="@color/color_title_bar"
+            android:textSize="@dimen/t3" 
+            android:visibility="gone"/>
+        
+    <LinearLayout
+        android:id="@+id/ll_monthly"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/button_send_express_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip" >
+
+        <TextView
+            android:id="@+id/tv_c_monthly"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:text="月结"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/t3" />
+        <TextView
+	        android:id="@+id/tv_monthly"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="20dp"
+	        android:background="@drawable/selector_img_express_pay"
+	        android:enabled="false"
+	        />
+        
+    </LinearLayout>
+    <View
+        style="@style/common_divider_line"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp" />
+    
+    <LinearLayout
+        android:id="@+id/ll_to_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="16.0dip" >
+
+        <TextView
+            android:id="@+id/tv_c_to_pay"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:text="到付"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/t3" />
+        <TextView
+	        android:id="@+id/tv_to_pay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="20dp"
+	        android:enabled="false"
+	        />
+        
+    </LinearLayout>
+    <View
+        style="@style/common_divider_line"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_the_third_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="16.0dip" >
+
+        <TextView
+            android:id="@+id/tv_c_the_third_pay"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:text="第三方"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/t3" />
+        <TextView
+	        android:id="@+id/tv_the_third_pay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="20dp"
+	        android:enabled="false"
+	        />
+        
+    </LinearLayout>
+    <View
+        style="@style/common_divider_line"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_now_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="16.0dip" >
+
+        <TextView
+            android:id="@+id/tv_c_now_pay"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:text="现付"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/t3" />
+        <TextView
+	        android:id="@+id/tv_now_pay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="20dp"
+	        android:enabled="false"
+	        />
+        
+    </LinearLayout>
+    <View
+        style="@style/common_divider_line"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp" />
+    
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_ellipse_blue_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_express_sends"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+</RelativeLayout>

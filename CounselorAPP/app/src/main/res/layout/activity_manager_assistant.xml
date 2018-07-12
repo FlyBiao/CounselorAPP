@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/base_color">
+
+    <include layout="@layout/base_title"></include>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_content_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_260"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_weight="3"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <com.cesaas.android.counselor.order.utils.chart.CakeSurfaceView
+                        android:id="@+id/assets_pie_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:defaultColor="#ff8712"
+                        app:fineTuningWidth="5"
+                        app:ringWidth="10"
+                        app:solidWidth="5"
+                        app:duration="2000"
+                        app:isSolid="false"
+                        app:isDrawByAnim="true"
+                        android:visibility="visible"/>
+
+                    <com.don.pieviewlibrary.PercentPieView
+                        android:id="@+id/percentPieView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_25"
+                        android:layout_marginRight="@dimen/size_20"
+                        app:centerTextSize="0sp"
+                        app:circleWidth="100dp"
+                        app:dataTextColor="#ffffff"
+                        app:dataTextSize="10sp" />
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_vip_grade_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F4FF"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="@dimen/size_5"
+                android:paddingLeft="@dimen/size_10"
+                android:orientation="horizontal">
+
+                <com.cesaas.android.counselor.order.custom.imageview.CircleImageView
+                    android:id="@+id/ivw_user_icon"
+                    android:layout_width="@dimen/size_55"
+                    android:layout_height="@dimen/size_55"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/not_user_icon"
+                    app:border_imageview_color="@color/white"
+                    app:border_imageview_width="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:text="店铺"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="粉丝 "/>
+                    <TextView
+                        android:id="@+id/tv_shop_fans_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 名"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:text="会员 "/>
+                    <TextView
+                        android:id="@+id/tv_shop_vip_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 名"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_10"
+                        android:drawableRight="@mipmap/arrow_right"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/common_divider_line"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_not_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="暂无数据"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

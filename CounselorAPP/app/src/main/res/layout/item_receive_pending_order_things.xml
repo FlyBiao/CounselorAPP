@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/ll_my_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_pending_reveice_type_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:textColor="@color/c1"
+            android:textSize="14sp" 
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+    
+
+    <TextView
+        android:id="@+id/tv_pending_reveice_check"
+        android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginBottom="15dp"
+             android:layout_marginRight="14dp"
+             android:background="@drawable/button_express_send_bg"
+             android:paddingBottom="@dimen/size_8"
+             android:paddingLeft="@dimen/size_20"
+             android:paddingRight="@dimen/size_20"
+             android:paddingTop="@dimen/size_8"
+             android:text="@string/tv_express_send"
+             android:textColor="@color/white"
+             android:visibility="gone"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/view_shop_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/shop_holder"
+        android:layout_width="185dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        >
+        
+        <TextView
+            android:id="@+id/shop_peice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/floralwhite"
+            android:background="@color/common_red"
+            android:text="价格" />
+        
+        <TextView
+            android:id="@+id/shop_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/floralwhite"
+            android:background="@color/color_title_bar"
+            android:text="数量" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/holder_bg"
+            android:gravity="center"
+            android:textColor="@color/floralwhite"
+            android:text="删除" />
+    </LinearLayout>
+
+</merge>

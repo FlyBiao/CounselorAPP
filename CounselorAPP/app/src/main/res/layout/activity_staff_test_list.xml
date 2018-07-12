@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/app_main_bg" >
+
+        <LinearLayout
+            android:id="@+id/ll_staff_test_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="考试"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+	    android:layout_height="45dp"
+	    android:orientation="vertical"
+	    android:gravity="center"
+	    android:background="@color/color_title_bar">
+	    
+        <View 
+        android:layout_height="0.5dip"
+        android:layout_width="230dp"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="@dimen/size_30"
+        android:orientation="horizontal" >
+		<View 
+            android:layout_height="match_parent"
+            android:layout_width="0.5dip"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/tv_not_test"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/button_staff_test_bg"
+            android:textColor="@color/color_title_bar"
+            android:text="未考试"
+            />
+        
+        <View 
+            android:layout_height="match_parent"
+            android:layout_width="0.5dip"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_test_ing"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:text="进行中"
+             />
+        <View 
+            android:layout_height="match_parent"
+            android:layout_width="0.5dip"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/tv_test_complete"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:text="已完成"
+             />
+        <View 
+            android:layout_height="match_parent"
+            android:layout_width="0.5dip"
+            android:background="@color/white"/>
+    </LinearLayout>
+    <View 
+        android:layout_height="0.5dip"
+        android:layout_width="230dp"
+        android:background="@color/white"/>
+        
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/fl_test_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

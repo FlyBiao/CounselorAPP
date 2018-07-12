@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_direct_selling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/size_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.cesaas.android.counselor.order.autoCompletetextview.AutoCompleteTextView
+            android:id="@+id/tvAutoCompl"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45"
+            android:paddingLeft="@dimen/size_10"
+            android:background="@drawable/auto_comtext_bg"
+            android:hint="请输入店铺名称"
+            android:completionThreshold="1"
+            app:completionHighlightColor="@color/colorAccent"
+            app:completionTextColor="#80000000"
+            app:completionTextSize="18sp"
+            app:completionIgnoreCase="true">
+
+        </com.cesaas.android.counselor.order.autoCompletetextview.AutoCompleteTextView>
+
+        <EditText
+            android:id="@+id/et_sales_screen_shop"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/size_13"
+            android:background="@drawable/et_remarks_bg"
+            android:gravity="left|top"
+            android:focusableInTouchMode="true"
+            android:hint="请输入店铺查询"
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:textColor="@color/c1"
+            android:textColorHint="@color/c3"
+            android:textCursorDrawable="@null"
+            android:textSize="14.0sp"
+            android:visibility="gone"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/recycler_screen_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_base_bg"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/dfff"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_staff_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="店员"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="店员详情"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/tv_edit_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/rl_vip_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dd"
+        android:paddingTop="20dp" >
+
+        <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+            android:id="@+id/iv_shopstaff_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/iv_shopstaff_img"
+            android:layout_toRightOf="@id/iv_shopstaff_img"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_shopstaff_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:textColor="@color/base_title_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_shopstaff_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="8dp" >
+        
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/ll_shop_manage"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="手机"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shopstaff_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="昵称"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shopstaff_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="性别"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shopstaff_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="店铺"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shopstaff_shopname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="店铺ID"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shop_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/rgb_text_huise"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+        
+        <Button
+            android:id="@+id/btn_init_setPassword"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/button_login_bg"
+            android:gravity="center"
+            android:text="重置密码"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+    </LinearLayout>
+    
+</LinearLayout>

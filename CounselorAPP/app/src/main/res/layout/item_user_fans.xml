@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/stand_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_item_bg"
+        android:padding="18dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp">
+
+        <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+            android:id="@+id/iv_fans_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:src="@drawable/no_shop_picture"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="40.0dip" >
+
+            <TextView
+                android:id="@+id/tv_fans_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:textColor="@color/color_title_bar"
+                android:ellipsize="end" 
+                android:singleLine="true"
+                android:maxWidth="90dp"
+                android:textSize="15sp"
+                android:text="fdf" />
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+	                android:id="@+id/tv_fans_mobile"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10.0dip"
+	                android:layout_marginTop="7dp"
+	                android:drawablePadding="8dp"
+	                android:textColor="@color/text_color_gray_3"
+	                android:textSize="14sp" 
+	                android:text="fdf"/>
+                
+                	<ImageView 
+                	    android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:contentDescription="@null"
+			            android:scaleType="centerCrop"
+			            android:layout_alignParentRight="true"
+			            android:src="@drawable/vip_session"/>
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

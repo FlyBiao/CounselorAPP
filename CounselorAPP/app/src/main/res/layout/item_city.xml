@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 检查单位item布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_item_pressed_style"
+    android:gravity="center_vertical"
+     >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+    	android:paddingLeft="5dp"
+    	android:paddingRight="4dp"
+    	android:paddingTop="5dp">
+    	
+        <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+            android:id="@+id/iv_group_fans_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:src="@drawable/no_shop_picture"/>
+    	
+        <TextView
+	        android:id="@+id/tvCity"
+	        android:layout_width="0px"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="7"
+	        android:clickable="false"
+	        android:ellipsize="end" 
+            android:singleLine="true"
+            android:maxWidth="110dp"
+	        android:padding="8dp"
+	        android:text="dfdf"
+	        android:textColor="#626466"
+	        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/cbCheckBox"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@drawable/checkbox_checked_style"
+        android:focusable="false" />
+        
+    </LinearLayout>
+
+</LinearLayout>

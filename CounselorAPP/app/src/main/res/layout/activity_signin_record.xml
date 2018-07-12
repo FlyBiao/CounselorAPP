@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_direct_selling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/size_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_5"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_start_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:paddingTop="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_5"
+                android:background="@drawable/et_remarks_bg"
+                android:gravity="center"
+                android:focusableInTouchMode="false"
+                android:drawableRight="@drawable/icon_right_allow"
+                android:hint="请选择时间"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/size_10"
+                android:textColor="@color/c1"
+                android:textColorHint="@color/c3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/font_14"
+                android:gravity="center_vertical"
+                android:text="至"/>
+
+            <EditText
+                android:id="@+id/et_end_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:paddingTop="@dimen/size_10"
+                android:layout_marginLeft="@dimen/size_5"
+                android:paddingBottom="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_15"
+                android:background="@drawable/et_remarks_bg"
+                android:gravity="center"
+                android:focusableInTouchMode="false"
+                android:drawableRight="@drawable/icon_right_allow"
+                android:hint="请选择时间"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/size_8"
+                android:textColor="@color/c1"
+                android:textColorHint="@color/c3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_10"
+            android:orientation="vertical">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

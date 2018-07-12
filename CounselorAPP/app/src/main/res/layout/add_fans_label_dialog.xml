@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:text="添加标签"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_18" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dcdcdc" />
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+	            
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="标签名:"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp"/>
+                
+                <com.cesaas.android.counselor.order.widget.MClearEditText
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:paddingLeft="10dp"
+	                android:background="@null"
+	                android:focusableInTouchMode="true"
+	                android:hint="请输入标签名"
+	                android:inputType="phone"
+	                android:textColor="@color/c1"
+	                android:textColorHint="@color/c3"
+	                android:textCursorDrawable="@null"
+	                android:textSize="16.0sp" />
+            
+        	</LinearLayout>
+        	
+            <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:layout_marginTop="5dp"
+	            android:orientation="horizontal">
+            
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="颜色:"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp"/>
+                
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+	            	android:orientation="horizontal">
+                
+                <TextView android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@color/shallow_blue"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"/>
+                
+                <TextView android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@color/common_yellow"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+                
+                <TextView android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@color/film_grade_title_dislike_selected"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+                
+                <TextView android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@color/film_grade_title_like_selected"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+                </LinearLayout>
+        	</LinearLayout>
+        	
+            
+            
+        </LinearLayout>
+        
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/size_18"
+            android:background="#dcdcdc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/two_button_layout"
+        android:layout_width="300dp"
+        android:background="@color/c5"
+        android:layout_height="47dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel_add_fans_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/leftbottom_round_drawable"
+            android:gravity="center"
+            android:text="@string/cancels"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/font_18" />
+        
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc" />
+        
+        <Button
+            android:id="@+id/btn_sure_add_fans_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/leftbottom_round_drawable"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/font_18" />
+</LinearLayout>
+</LinearLayout>

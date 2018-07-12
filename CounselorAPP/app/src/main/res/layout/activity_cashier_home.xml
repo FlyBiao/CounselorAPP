@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingLeft="8dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_shop_manage"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/vip1"/>
+
+            <TextView
+                android:id="@+id/tv_shopfans_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip">
+
+            <ImageView
+                android:id="@+id/iv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/edit"/>
+
+            <TextView
+                android:id="@+id/tv_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="36sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.cesaas.android.counselor.order.widget.gridview.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="0.0dip"
+                android:listSelector="@null"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.0dip"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_zero"
+                    android:layout_width="177dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bg_gv"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/commo_text_color"
+                    android:textSize="32.0sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_point"
+                    android:layout_width="88dp"
+                    android:layout_height="80dp"
+                    android:layout_toRightOf="@id/tv_zero"
+                    android:background="@drawable/bg_gv"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:text="."
+                    android:textColor="@color/commo_text_color"
+                    android:textSize="32.0sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@color/commo_text_color"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/griditems_bg"
+                android:textSize="30.0sp"/>
+
+            <TextView
+                android:id="@+id/tv_subtract"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="----"
+                android:textColor="@color/griditems_bg"
+                android:textSize="30.0sp"/>
+
+            <TextView
+                android:id="@+id/tv_proceeds"
+                android:layout_width="fill_parent"
+                android:layout_height="170dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="收款"
+                android:textColor="@color/griditems_bg"
+                android:textSize="30.0sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

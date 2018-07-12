@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidsLib-release/AndroidsLib-release.iml" filepath="$PROJECT_DIR$/AndroidsLib-release/AndroidsLib-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonAndroid/CommonAndroid.iml" filepath="$PROJECT_DIR$/CommonAndroid/CommonAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CounselorAPP.iml" filepath="$PROJECT_DIR$/CounselorAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GraffitiLib/GraffitiLib.iml" filepath="$PROJECT_DIR$/GraffitiLib/GraffitiLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev/Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev.iml" filepath="$PROJECT_DIR$/Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev/Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basetabview/basetabview.iml" filepath="$PROJECT_DIR$/basetabview/basetabview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagepicker/imagepicker.iml" filepath="$PROJECT_DIR$/imagepicker/imagepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialcalendar/materialcalendar.iml" filepath="$PROJECT_DIR$/materialcalendar/materialcalendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdialoglibrary/materialdialoglibrary.iml" filepath="$PROJECT_DIR$/materialdialoglibrary/materialdialoglibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview-swipe/recyclerview-swipe.iml" filepath="$PROJECT_DIR$/recyclerview-swipe/recyclerview-swipe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharelibs/sharelibs.iml" filepath="$PROJECT_DIR$/sharelibs/sharelibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_title_bar" >
+
+        <LinearLayout
+            android:id="@+id/iv_un_orderdetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_back" />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:text="待接单"
+            />
+        </LinearLayout>
+
+
+        <!-- <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="@string/main_sures"
+            android:textColor="@color/white"
+            android:textSize="18sp" /> -->
+    </RelativeLayout>
+
+    
+     <ListView
+        android:id="@+id/lv_un_order_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="1px"
+        android:listSelector="#00000000">
+    </ListView>
+
+</LinearLayout>

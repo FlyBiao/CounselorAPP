@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <LinearLayout
+    android:id="@+id/ll_base_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/new_base_bg">
+        <include layout="@layout/base_title_special"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_query_member"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:background="@color/new_base_bg"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="完成并关闭服务"/>
+        <TextView
+            android:id="@+id/tv_sure_continue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green_normal"
+            android:textColor="@color/white"
+            android:text="完成不关闭"/>
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/line"
+            android:text="取消"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_query_member"
+        android:layout_below="@id/ll_base_title"
+        android:layout_above="@id/ll_query_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_40"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_member_service_result"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

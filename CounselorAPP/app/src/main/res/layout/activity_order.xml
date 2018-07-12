@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/base_color"
+              android:orientation="vertical">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_order_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_order_manger_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/tv_shop_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:text="门店订单"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white_pressed">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_content_bg"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabSelectedTextColor="@color/base_color"
+                app:tabMode="fixed">
+
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+
+
+        
+        <LinearLayout
+	        android:id="@+id/ll_send_order_status"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/size_55"
+	        android:background="@color/white"
+	        android:paddingBottom="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:orientation="horizontal"
+            android:visibility="gone">
+        
+        <TextView
+            android:id="@+id/tv_send_all_order"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/button_ellipse_blue_bg"
+            android:textColor="@color/white"
+            android:text="@string/receive_order"
+            />
+
+        <TextView
+            android:id="@+id/tv_send_nopayOrder"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/c1"
+            android:text="@string/no_pay_order"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_send_waitinOrder"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/c1"
+            android:text="@string/waitin_order"
+             />
+        
+        <TextView
+            android:id="@+id/tv_send_waitoutOrder"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/c1"
+            android:text="@string/wait_out_order"
+             />
+
+        <TextView
+            android:id="@+id/tv_send_okOrder"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/c1"
+            android:singleLine="true"
+            android:text="@string/ok_order"
+             />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/my_send_order_realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

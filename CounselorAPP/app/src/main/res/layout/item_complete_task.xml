@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp"
+	    android:orientation="vertical">
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+        <TextView 
+            android:id="@+id/tv_shop_clie"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:background="@drawable/button_ellipse_red_bg"
+    		android:textSize="12sp"
+    		android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+    		android:textColor="@color/white"
+    		android:text="11"/>
+        
+        <TextView 
+            android:id="@+id/tv_complete_task_title"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_toRightOf="@id/tv_shop_clie"
+    		android:textSize="16sp"
+    		android:layout_marginLeft="10dp"
+    		android:text="店铺陈列"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_below="@id/tv_complete_task_title"
+    		android:layout_toRightOf="@id/tv_shop_clie"
+    		android:layout_marginLeft="10dp"
+    		android:textSize="14sp"
+    		android:layout_marginTop="10dp"
+    		android:textColor="@color/c5"
+    		android:text="店铺日常陈列"/>
+        
+        <TextView 
+            android:id="@+id/tv_complete_task_time"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textSize="16sp"
+    		android:layout_alignParentRight="true"
+    		android:layout_marginRight="10dp"
+    		android:text="2016-11-19 10:00:00"/>
+        
+        <ImageView 
+            android:id="@+id/iv_task_pattern"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_below="@id/tv_complete_task_time"
+    		android:textSize="16sp"
+    		android:layout_alignParentRight="true"
+    		android:layout_marginTop="10dp"
+    		android:layout_marginRight="10dp"
+    		android:textColor="@color/c5"
+    		android:visibility="visible"/>
+        
+        <TextView 
+            android:id="@+id/tv_complete_task_pattern"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_below="@id/tv_complete_task_time"
+    		android:textSize="16sp"
+    		android:layout_alignParentRight="true"
+    		android:layout_marginTop="10dp"
+    		android:textColor="@color/c5"
+    		android:visibility="gone"
+    		android:text="团队"/>
+        
+    </RelativeLayout>
+    
+    </LinearLayout>
+    <View style="@style/common_divider_line" />
+
+</LinearLayout>

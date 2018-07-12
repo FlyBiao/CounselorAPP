@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyImageViewWidget">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="frameDrawable" format="reference|color" />
+        <attr name="stateDrawable" format="reference|color" />
+        <attr name="stateMaskDrawable" format="reference|color" />
+        <attr name="sliderDrawable" format="reference|color" />
+        <attr name="withTextInterval" format="dimension" />
+    </declare-styleable>
+
+    <attr name="item_count" format="integer"></attr>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="item_count" />
+    </declare-styleable>
+
+    
+    <!-- 自定义流布局属性 -->
+    <declare-styleable name="FlowLayout">
+
+        <attr name="textSize" format="dimension"/>
+        <attr name="horizontalSpacing" format="dimension"/>
+        <attr name="verticalSpacing" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="flowBackground" format="reference"/>
+        <attr name="stype" format="dimension">
+            <enum name="select" value="0"/>
+            <enum name="tag" value="1"/>
+        </attr>
+        <attr name="isSingle" format="boolean"/>
+        <attr name="equally" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircleProgressBar">
+        <attr name="outside_color" format="color" />
+        <attr name="outside_radius" format="dimension" />
+        <attr name="inside_color" format="color" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="max_progress" format="integer" />
+        <attr name="progress" format="float" />
+        <attr name="direction">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+    
+    
+    <!-- 自定义索引属性 -->
+     <attr name="indexBarTextSize" format="dimension" />
+
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+    
+    <attr name="switchStyle" format="reference" />
+    <declare-styleable name="Switch">
+	    <attr name="textLeft" format="string"/>
+	    <attr name="textRight" format="string"/>
+	    <attr name="switchMinWidth" format="dimension" />
+	    <attr name="switchPadding" format="dimension" />	    
+	    <attr name="colorUnChecked" format="color" />	    
+	    <attr name="colorChecked" format="color" />	    
+	    <attr name="backgroundDrawable" format="reference" />	    
+	    <attr name="switchDrawable" format="dimension" />
+	    <attr name="innerPadding" format="dimension" />	   
+	    <attr name="isChecked" format="boolean" />	    
+	    	    
+	</declare-styleable>
+	
+    <!-- GroupButtonView -->
+    <declare-styleable name="GroupButtonView">
+        <attr name="groupBtnNameText" format="string"></attr>
+        <attr name="groupBtnCodeText" format="string"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="FlowLayouts">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="maxLine" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="IndicateProgressView">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="startProgressColor" format="color"/>
+        <attr name="endProgressColor" format="color"/>
+        <attr name="indicateTextcolor" format="color"/>
+    </declare-styleable>
+
+
+    <!--自定义提示 styleable-->
+    <declare-styleable name="KMPAutoComplTextView">
+        <attr name="completionHighlightColor" format="reference|color" />
+        <attr name="completionTextColor" format="reference|color" />
+        <attr name="completionTextSize" format="dimension" />
+        <attr name="completionIgnoreCase" format="boolean" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_size" format="dimension" />
+        <attr name="border_imageview_color" format="color" />
+            <attr name="border_imageview_width" format="dimension" />
+            <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="JerryChartView">
+        <!-- 分割线颜色（应与背景色一致） -->
+        <attr name="lineColor" format="reference|color" />
+        <!-- 分割线宽度 -->
+        <attr name="lineWidth" format="dimension" />
+        <!-- 突出部分圆心距离原位置的圆心（仅扇形有效） -->
+        <attr name="distance" format="dimension" />
+        <!-- 百分比文本大小 -->
+        <attr name="android:textSize"/>
+        <!-- 起始绘制角度 3点方向为0，默认为12点方向（-90） -->
+        <attr name="startAngle" format="float" />
+        <!-- 扇形or环形 -->
+        <attr name="chartStyle">
+            <enum name="FANSHAPE" value="0" />
+            <enum name="ANNULAR" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CakeSurfaceView">
+        <attr name="isDrawByAnim" format="boolean"/>//是否动画
+        <attr name="isSolid" format="boolean"/>//是否立体
+        <attr name="duration" format="integer|reference"/>//动画时间
+        <attr name="defaultColor" format="string"/>//默认颜色
+
+        <attr name="ringWidth" format="integer|reference"/>//圆环宽度
+        <attr name="solidWidth" format="integer|reference"/>//立体宽度
+        <attr name="fineTuningWidth" format="integer|reference"/>//微调宽度
+    </declare-styleable>
+
+    <!--<declare-styleable name="PieView">-->
+        <!--<attr name="centerTextSize" format="dimension" />-->
+        <!--<attr name="dataTextSize" format="dimension" />-->
+        <!--<attr name="centerTextColor" format="color" />-->
+        <!--<attr name="dataTextColor" format="color" />-->
+        <!--<attr name="circleWidth" format="dimension" />-->
+    <!--</declare-styleable>-->
+
+    <!-- RVPIndicator -->
+    <declare-styleable name="RVPIndicator">
+        <attr name="text_color_normal" format="color" />
+        <attr name="text_color_selected" format="color" />
+        <attr name="text_size" format="dimension" />
+        <!--指示器可见数量-->
+        <attr name="indicator_visible_count" format="integer" />
+        <attr name="indicator_color" format="color" />
+        <attr name="indicator_style">
+            <enum name="bitmap" value="0" />
+            <enum name="line" value="1" />
+            <enum name="square" value="2" />
+            <enum name="triangle" value="3" />
+        </attr>
+        <!--指示器bitmap资源,style=bitmap有效-->
+        <attr name="style_bitmap_src" format="reference" />
+        <!--线性指示器左右padding，默认根据数量均分屏幕-->
+        <attr name="style_line_padding" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

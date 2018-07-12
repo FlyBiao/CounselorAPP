@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidsLib-release" />
+            <option value="$PROJECT_DIR$/CommonAndroid" />
+            <option value="$PROJECT_DIR$/GraffitiLib" />
+            <option value="$PROJECT_DIR$/Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/basetabview" />
+            <option value="$PROJECT_DIR$/imagepicker" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/materialcalendar" />
+            <option value="$PROJECT_DIR$/materialdialoglibrary" />
+            <option value="$PROJECT_DIR$/recyclerview-swipe" />
+            <option value="$PROJECT_DIR$/sharelibs" />
+            <option value="$PROJECT_DIR$/view" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

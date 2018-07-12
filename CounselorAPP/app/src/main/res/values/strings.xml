@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">超级零售</string>
+
+    <string name="home_page">首页</string>
+    <string name="workbench">工作台</string>
+    <string name="vip">会员</string>
+    <string name="shop">商品</string>
+
+    <string name="all_shop">所有商品</string>
+    <string name="my_attention_shop">我关注的</string>
+    <string name="collection_shop">为TA收藏</string>
+    <string name="interest_shop">TA感兴趣</string>
+
+
+    <string name="me_payer">待付款</string>
+    <string name="me_shipments">待发货</string>
+    <string name="me_consign">待收货</string>
+    <string name="me_refund">退款/售后</string>
+    <string name="me_allorder">全部</string>
+    <string name="home">店铺</string>
+    <string name="orders">个人设置</string>
+    <string name="me_inaddr">收货地址</string>
+    <string name="me_aftersale">意见反馈</string>
+    <string name="me_fback_hint">请输入您要反馈的内容</string>
+    <string name="me_ticket">我的优惠券</string>
+
+    <string name="main_empty">内容不能为空</string>
+    <string name="text_length">长度应为 %1$d-%2$d 位</string>
+
+
+    <string name="more_support">支持我们</string>
+    <string name="more_msgwarn">消息提醒</string>
+    <string name="more_shared">分享APP</string>
+    <string name="more_cache">消除缓存</string>
+    <string name="more_help">帮助信息</string>
+    <string name="more_network">网络诊断</string>
+    <string name="more_eworry">关于我们</string>
+    <string name="more_update">版本更新</string>
+    <string name="more_clean_suc">清除成功！</string>
+    <string name="more_clean_hint">如果空间不足请点击清除缓存，一般建议保留！</string>
+    <string name="more_clean">清除</string>
+    <string name="more_save">保留</string>
+    <string name="more_support_hint">您的手机没有找到应用市场！</string>
+
+    <string name="about_company">Copyright &#169;2015\n深圳前海四威数据网络科技有限公司</string>
+
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+
+    <!-- 商家版Strings========================================== -->
+    <string name="my_sales">我的销售</string>
+    <string name="sales">销售</string>
+    <string name="my_earnings">收益</string>
+    <string name="earnings">收益</string>
+    <string name="fans_service">粉丝</string>
+    <string name="fans">粉丝</string>
+    <string name="order">订单</string>
+    <string name="receive_order">接单</string>
+    <string name="task">任务</string>
+    <string name="more">更多</string>
+    <string name="my">我的</string>
+
+    <string name="all_order">全部</string>
+    <string name="no_pay_order">未付款</string>
+    <string name="waitin_order">未发货</string>
+    <string name="wait_out_order">已发货</string>
+    <string name="refund_order">退款</string>
+    <string name="ok_order">已完成</string>
+
+    <string name="tips_titles">温馨提示</string>
+    <string name="cancels">取消</string>
+    <string name="main_sures">确认修改</string>
+
+
+    <string name="s_order">请输入物流单号</string>
+
+    <string name="setting_user_title">头像</string>
+    <string name="login_img_verify_code_input">请输入图形验证码</string>
+    <string name="login_img_verify_code_change">换一个</string>
+    <string name="login_input_mobile">请输入手机号</string>
+    <string name="login_input_pwd">请输入密码</string>
+    <string name="login_new_hint">请输入新密码</string>
+    <string name="login_old_hint">请输入原密码</string>
+    <string name="login_renew_hint">确认新密码</string>
+    <string name="login_login">登    录</string>
+    <string name="login_account_not_null">手机号不能为空</string>
+    <string name="login_tel_sucs">手机格式不正确</string>
+    <string name="login_pwd_not_null">密码不能为空</string>
+    <string name="login_pwd_sucs">密码长度应为4&#8211;12位</string>
+    <string name="login_pwd_forget">忘记密码</string>
+    <string name="login_reg">注    册</string>
+    <string name="login_reg_rightaway">立即注册</string>
+    <string name="tips_login_support_type">欧麦LadyGaGa</string>
+    <string name="register_name_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ_-+=!%$@#</string>
+    <string name="tuichu">退    出</string>
+    <string name="login_nick_hint">请输入昵称</string>
+    <string name="login_nick">以英文字母或汉字开头，限2到16个字符</string>
+
+
+    <string name="la_fans">微信拉粉</string>
+    <string name="my_want_watch">想看</string>
+    <string name="my_movie_ticket_comment_tip">待评价</string>
+    <string name="my_orders">我的订单</string>
+    <string name="my_message">我的消息</string>
+    <string name="my_weixin_fans">微信拉粉</string>
+    <string name="shop_scan_send">扫描发货</string>
+    <string name="my_hongbao_tip">dddd</string>
+    <string name="my_setting">设置</string>
+
+    <string name="ll_my_about_we">关 于</string>
+    <string name="checkversion">检测新版本</string>
+    <string name="feedback_title">意见反馈</string>
+    <string name="layout_clean_cache">清除缓存</string>
+    <string name="layout_msg_push">消息设置</string>
+
+    <string name="setting_title">我的销售</string>
+
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+
+    <string name="custom_order">推荐商品</string>
+    <string name="custom_o2oorder">订单</string>
+    <string name="custom_words_art">话术</string>
+
+    <string name="search_hint">请输入手机号码</string>
+    <string name="search_cancel">取消</string>
+    <string name="search_btn">搜索</string>
+    <string name="search_fans">粉丝</string>
+    <string name="search_mobile">商品</string>
+
+
+    <string name="placeHolder">placeHolder</string>
+    <string name="seekbar_add">+</string>
+    <string name="seekbar_minus">-</string>
+    <string name="create">生成</string>
+    <string name="scan_failed">扫描失败</string>
+    <string name="bottom_hint">建议与镜头保持10CM距离，尽量避免逆光和阴影</string>
+    <string name="top_hint">将条形码或二维码置于取景框内系统会自动扫描</string>
+    <string name="cancel">取消</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="button_ok">确定</string>
+
+    <string name="back">返回</string>
+
+    <string name="tv_order_id">订单号</string>
+    <string name="tv_order_createTime">下单时间：</string>
+    <string name="tv_user">用户:</string>
+    <string name="tv_scan_check">验货</string>
+    <string name="tv_orderState">未付款</string>
+    <string name="tv_order_session">会话</string>
+    <string name="tv_express_send">发货</string>
+    <string name="tv_back_order">退回</string>
+    <string name="tv_scan_send">扫描发货</string>
+
+    <string name="shop_manager">店铺管理</string>
+    <string name="tv_shop_order">店铺订单</string>
+    <string name="tv_shop_order_no_data">暂时没有数据</string>
+    <string name="tv_shop_fans">粉丝</string>
+    <string name="tv_shop_fans_size">()</string>
+
+    <string name="tv_tab_friends">群组</string>
+    <string name="tv_tab_chat">讨论组</string>
+
+    <string name="freeze">暂时冻结</string>
+    <string name="settled">已结算</string>
+    <string name="can_settled">可结算</string>
+    <string name="no_can_settled">不能结算</string>
+    <string name="await_settled">待结算</string>
+
+    <string name="totals">总收入:</string>
+    <string name="total">总收入:</string>
+    <string name="sum">总收入(元)</string>
+    <string name="order_send">接单发货收入(元)</string>
+    <string name="fans_income">推荐粉丝收入(元)</string>
+    <string name="send_commission">发货佣金</string>
+    <string name="all">全部</string>
+
+    <string name="kd_send">快递发货</string>
+    <string name="scan">扫一扫</string>
+    <string name="once_send">立即发货</string>
+    <string name="express_send">物流发货</string>
+    <string name="online_send">在线发货</string>
+
+    <!-- 订单详情 -->
+    <string name="order_detail">订单详情</string>
+    <string name="order_consignee_name">收货人</string>
+    <string name="order_consignee_type">取货方式</string>
+    <string name="order_consignee_mobile">手机</string>
+    <string name="order_consignee_address">收货地址</string>
+    <string name="order_consignee_date">收货时间</string>
+    <string name="order_remark">备注</string>
+    <string name="order_develop_commission">推荐佣金</string>
+    <string name="order_send_commission">发货佣金</string>
+    <string name="order_pay_price">支付金额</string>
+    <string name="order_total_price">总金额</string>
+
+
+    <string name="permission_get_accounts_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_GET_ACCOUNTS</string>
+    <string name="permission_read_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_call_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CALL_PHONE</string>
+    <string name="permission_camera_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CAMERA</string>
+    <string name="permission_access_fine_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_FINE_LOCATION</string>
+    <string name="permission_access_coarse_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_COARSE_LOCATION</string>
+    <string name="permission_read_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_white_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_recode_audio_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_RECORD_AUDIO</string>
+
+    <string name="error">Network error</string>
+    <string name="network_err">Simulation network error</string>
+    <string name="empty_network_error">Network error, Click Retry</string>
+    <string name="empty_no_data">There is no data, Click Retry</string>
+
+
+    <!--font-awesome图标-->
+    <!--首页下拉功能-->
+    <string name="shop_task">&#xf0ae;</string>
+    <string name="count_off">&#xf160;</string>
+    <string name="shop_order">&#xf03c;</string>
+
+    <string name="performance_distribution">&#xf1a5;</string>
+    <string name="try_record">&#xf0cb;</string>
+    <string name="marketing_activity">&#xf073;</string>
+
+    <string name="into_store_register">&#xf2bc;</string>
+    <string name="invitation_order">&#xf274;</string>
+    <string name="business_school">&#xf19c;</string>
+
+    <string name="member_distribution">&#xf0e8;</string>
+    <string name="group_messaging">&#xf1d8;</string>
+    <string name="weChat_fans">&#xf1d7;</string>
+
+    <string name="counselor_ranking">&#xf091;</string>
+    <string name="store_performance_report">&#xf201;</string>
+    <string name="sales_list">&#xf080;</string>
+
+    <string name="into_store_manger_report">&#xf0ca;</string>
+    <string name="try_report">&#xf0f7;</string>
+    <string name="goods_collocation">&#xf217;</string>
+
+
+    <!--选择店员-->
+    <string name="all_contact">&#xf0ac;</string>
+    <string name="lately_contact">&#xf017;</string>
+    <string name="group_contact">&#xf0c0;</string>
+    <string name="department_contact">&#xf1e1;</string>
+    <string name="fa_address_book_o">&#xf2ba;</string>
+    <string name="fa_check_circle">&#xf058;</string>
+
+
+    <!--消息-->
+    <string name="system_msg">&#xf0a1;</string>
+    <string name="express_msg">&#xf0d1;</string>
+    <string name="task_msg">&#xf0ae;</string>
+    <string name="msg">&#xf0e6;</string>
+
+    <string name="del">&#xf014;</string>
+
+    <string name="user">&#xf007;</string>
+    <string name="user_o">&#xf2c0;</string>
+    <string name="users">&#xf0c0;</string>
+    <string name="users_o_s">&#xf2be;</string>
+    <string name="mobile">&#xf10b;</string>
+    <string name="play_circle">&#xf144;</string>
+    <string name="fa_dot_circle">&#xf192;</string>
+    <string name="pause">&#xf04c;</string>
+    <string name="_cancel">&#xf00d;</string>
+
+    <string name="money">&#xf0d6;</string>
+
+    <string name="fa_caret_down">&#xf0d7;</string>
+    <string name="fa_caret_up">&#xf0d8;</string>
+    <string name="fa_align_justify">&#xf039;</string>
+    <string name="fa_external_link">&#xf08e;</string>
+
+    <string name="fa_music">&#xf001;</string>
+    <string name="fa_area_chart">&#xf1fe;</string>
+    <string name="fa_bar_chart_o">&#xf080;</string>
+    <string name="fa_line_chart">&#xf201;</string>
+    <string name="fa_pie_chart">&#xf200;</string>
+    <string name="fa_glass">&#xf000;</string>
+    <string name="fa_play_circle_o">&#xf01d;</string>
+    <string name="fa_caret_left">&#xf0d9;</string>
+    <string name="fa_caret_right">&#xf0da;</string>
+    <string name="fa_refresh">&#xf021;</string>
+    <string name="fa_rotate_right">&#xf01e;</string>
+    <string name="fa_long_arrow_right">&#xf178;</string>
+    <string name="fa_long_arrow_down">&#xf175;</string>
+    <string name="fa_phone">&#xf095;</string>
+    <string name="fa_calendar">&#xf272;</string>
+    <string name="fa_calendars">&#xf073;</string>
+    <string name="fa_birthday">&#xf1fd;</string>
+    <string name="fa_database">&#xf1c0;</string>
+    <string name="fa_comments">&#xf0e6;</string>
+    <string name="fa_clock">&#xf017;</string>
+    <string name="fa_cart">&#xf07a;</string>
+    <string name="fa_certificate">&#xf0a3;</string>
+    <string name="fa_dollar">&#xf155;</string>
+    <string name="fa_star">&#xf005;</string>
+    <string name="fa_star_half_o">&#xf123;</string>
+    <string name="fa_star_o">&#xf006;</string>
+    <string name="fa_cogs">&#xf085;</string>
+    <string name="fa_mail_forward">&#xf064;</string>
+    <string name="fa_key">&#xf084;</string>
+    <string name="fa_arrow_right">&#xf061;</string>
+    <string name="fa_volume_control_phone">&#xf2a0;</string>
+    <string name="fa_gift">&#xf06b;</string>
+    <string name="fa_sys_update">&#xf268;</string>
+    <string name="fa_tag">&#xf02b;</string>
+    <string name="fa_tags">&#xf02c;</string>
+    <string name="fa_pencil">&#xf040;</string>
+    <string name="fa_copyright">&#xf1f9;</string>
+    <string name="fa_file_text_o">&#xf0f6;</string>
+    <string name="fa_chevron_circle_down">&#xf13a;</string>
+    <string name="fa_th_large">&#xf009;</string>
+    <string name="fa_chrome">&#xf268;</string>
+    <string name="fa_sort_desc">&#xf0dd;</string>
+    <string name="fa_sort_up">&#xf0de;</string>
+    <string name="fa_circle">&#xf111;</string>
+    <string name="fa_search">&#xf002;</string>
+    <string name="fa_folder_open_o">&#xf115;</string>
+    <string name="fa_folder_open">&#xf07c;</string>
+    <string name="fa_paper_plane">&#xf1d8;</string>
+    <string name="fa_plane">&#xf072;</string>
+    <string name="fa_plus_circle">&#xf055;</string>
+    <string name="fa_angle_down">&#xf107;</string>
+    <string name="fa_angle_up">&#xf106;</string>
+    <string name="fa_check">&#xf00c;</string>
+    <string name="fa_check_square_o">&#xf046;</string>
+    <string name="fa_first_order">&#xf2b0;</string>
+    <string name="fa_head_phones">&#xf025;</string>
+    <string name="fa_del_o">&#xf014;</string>
+    <string name="fa_check_circle_o">&#xf05d;</string>
+    <string name="fa_commenting_o">&#xf27b;</string>
+    <string name="fa_get_pocket">&#xf265;</string>
+    <string name="fa_shopping_cart">&#xf07a;</string>
+    <string name="fa_barcode">&#xf02a;</string>
+    <string name="fa_bell">&#xf0f3;</string>
+    <string name="fa_outdent">&#xf03b;</string>
+    <string name="fa_puzzle_piece">&#xf12e;</string>
+    <string name="fa_times">&#xf00d;</string>
+
+</resources>

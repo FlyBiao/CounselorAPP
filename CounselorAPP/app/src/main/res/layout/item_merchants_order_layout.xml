@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+    
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/tv_orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商家订单号:1239484885849494"
+                 />
+
+            <TextView
+                android:id="@+id/tv_order_create_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_orderid"
+                android:text="下单时间:2016/03/14"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginBottom="5dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv_goods_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/icon_main1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="50.0dip" >
+
+                <TextView
+                    android:id="@+id/tv_goods_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="0-1商品名称"
+                    android:textColor="@color/c1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_attr"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="春季纯情小男 S 蓝色"
+                    android:textColor="@color/c1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_uantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:text="X83"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_divider_line"
+            android:layout_marginBottom="5dp" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_user_order_operation"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical">
+                
+                <TextView 
+                    android:id="@+id/tv_detail_response"
+                    android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                    android:text="等待用户回复"
+                    />
+                
+                <Button
+                android:id="@+id/btn_order_stock"
+                android:layout_width="65.0dip"
+                android:layout_height="40.0dip"
+                android:layout_toRightOf="@id/tv_detail_response"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/bg_selector_my_btn_yellow"
+                android:text="有货"
+                android:textSize="16sp" />
+                
+                <Button
+                android:id="@+id/btn_scan_merchants_order_delivery"
+                android:layout_width="65.0dip"
+                android:layout_height="40.0dip"
+                android:layout_toRightOf="@id/tv_detail_response"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/bg_selector_my_btn_yellow"
+                android:text="扫描发货"
+                android:textSize="16sp" 
+                android:visibility="gone"/>
+                
+                <Button
+                android:id="@+id/btn_order_not_available"
+                android:layout_width="65.0dip"
+                android:layout_height="40.0dip"
+                android:layout_toRightOf="@id/btn_order_stock"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/bg_selector_my_btn_yellow"
+                android:text="无货"
+                android:textSize="16sp" />
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>

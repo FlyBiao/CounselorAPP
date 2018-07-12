@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/ll_message"
+              android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/size_10"
+        android:paddingLeft="@dimen/size_15"
+        android:paddingTop="@dimen/size_5"
+        android:paddingBottom="@dimen/size_5">
+
+        <TextView
+            android:id="@+id/tv_customize_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员名称"
+            android:textColor="@color/c1"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:id="@+id/tv_no1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别:"
+                android:textColor="#ff707070"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_customize_shopStyleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_no1"
+                android:text="女"
+                android:textColor="#ff707070"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_customize_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99"
+                android:visibility="gone"
+                android:textColor="#fff15151"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

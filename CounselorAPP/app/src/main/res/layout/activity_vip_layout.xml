@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/base_title"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        
+        <LinearLayout
+	        android:id="@+id/ll_send_order_status"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/size_55"
+	        android:background="@color/white"
+	        android:gravity="center_horizontal"
+	        android:paddingBottom="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:layout_marginBottom="5dp"
+	        android:orientation="horizontal"
+			android:visibility="visible">
+	        
+            <LinearLayout 
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                
+                <TextView
+		            android:id="@+id/tv_vip_session"
+		            android:layout_width="0dp"
+		            android:layout_height="fill_parent"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:singleLine="true"
+		            android:background="@drawable/button_ellipse_blue_bg"
+		            android:textColor="@color/white"
+		            android:layout_marginRight="10dp"
+		            android:text="会话"
+		            />
+        
+        <TextView
+            android:id="@+id/tv_my_fans"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/c1"
+            android:layout_marginRight="10dp"
+            android:text="我的会员"
+            />
+
+        <TextView
+            android:id="@+id/tv_shop_fans"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/c1"
+            android:text="门店会员"
+            />
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/vip_realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_return_visit_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_content_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_80"
+            android:background="@color/white"
+            android:padding="@dimen/size_10">
+
+            <LinearLayout
+                android:id="@+id/ll_icon"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+                    android:id="@+id/ivw_return_visit_detail_icon"
+                    android:layout_width="@dimen/size_55"
+                    android:layout_height="@dimen/size_55"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_picture"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/ll_icon"
+                android:layout_marginLeft="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_return_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/result_view"
+                    android:textSize="@dimen/font_16"
+                    android:text="FlyBiao"/>
+
+                <TextView
+                    android:id="@+id/tv_return_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/font_14"
+                    android:text="超级白金VIP"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_return_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-04-11"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:background="@color/white"
+            android:padding="@dimen/size_13"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="已购买的商品"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30"
+                        android:layout_height="@dimen/size_30"
+                        android:src="@mipmap/more"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_35"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_shop_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_13"
+            android:layout_marginTop="@dimen/size_10"
+            android:background="@color/white">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回访话术模板"/>
+
+            <EditText
+                android:id="@+id/etContent"
+                android:layout_width="fill_parent"
+                android:layout_height="120.0dip"
+                android:layout_marginTop="@dimen/size_15"
+                android:paddingTop="10dp"
+                android:background="@drawable/et_remarks_bg"
+                android:gravity="left|top"
+                android:focusableInTouchMode="true"
+                android:hint="请写入发送内容"
+                android:singleLine="false"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:textColor="@color/c1"
+                android:textColorHint="@color/c3"
+                android:textCursorDrawable="@null"
+                android:textSize="14.0sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_55"
+                android:padding="@dimen/size_10"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_tel_return"
+                        android:layout_width="@dimen/size_35"
+                        android:layout_height="@dimen/size_35"
+                        android:layout_marginRight="@dimen/size_15"
+                        android:src="@mipmap/tel"/>
+
+                    <ImageView
+                        android:id="@+id/iv_sms_return"
+                        android:layout_width="@dimen/size_35"
+                        android:layout_height="@dimen/size_35"
+                        android:layout_marginRight="@dimen/size_15"
+                        android:src="@mipmap/sms"/>
+
+                    <ImageView
+                        android:id="@+id/iv_weixin_return"
+                        android:layout_width="@dimen/size_35"
+                        android:layout_height="@dimen/size_35"
+                        android:src="@mipmap/weixin"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_edit_talk_template"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/edit"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_send_message"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/size_30"
+            android:layout_marginLeft="@dimen/size_13"
+            android:layout_marginRight="@dimen/size_13"
+            android:gravity="center"
+            android:background="@drawable/button_ellipse_red_bg"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定回访"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

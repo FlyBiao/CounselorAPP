@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/stand_bg"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@color/white">
+    
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal">
+        
+        <com.cesaas.android.counselor.order.custom.SearchEditText
+            android:id="@+id/m_search_two"
+            style="@style/editTextStyle"
+            android:layout_margin="10dp" />
+        
+    </RelativeLayout>
+    
+        <ScrollView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone">
+            
+	            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	
+	            <com.cesaas.android.counselor.order.custom.flowlayout.FlowTagLayout
+	                android:id="@+id/serach_size_flow_layout"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+	            
+	        	</LinearLayout>
+	
+	    </ScrollView>
+        
+    <View style="@style/common_divider_line" />
+    
+    <LinearLayout
+        android:id="@+id/ll_fans_group_send"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip">
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="群发消息"
+             android:layout_marginLeft="5dp"
+             android:drawablePadding="10dp"
+             android:drawableLeft="@drawable/group_message"
+             android:textSize="14sp" />
+    </LinearLayout>
+    
+	<View style="@style/common_divider_line" />
+
+	<LinearLayout
+        android:id="@+id/ll_fans_labels"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip">
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="粉丝标签"
+             android:layout_marginLeft="5dp"
+             android:drawableLeft="@drawable/vip_tag"
+             android:drawablePadding="10dp"
+             android:textSize="14sp" />
+    </LinearLayout>
+    
+	</LinearLayout>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingTop="8dp"
+	    android:orientation="vertical">
+
+    <com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView
+        android:id="@+id/refresh_fans_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/white"
+        android:dividerHeight="0px"
+        android:listSelector="#00000000" 
+        android:visibility="visible">
+
+        <com.cesaas.android.counselor.order.widget.LoadMoreListView
+            android:id="@+id/load_more_fans_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/white"
+            android:dividerHeight="0px"
+            android:listSelector="#00000000" />
+    </com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView>
+
+    <TextView
+        android:id="@+id/tv_fans_no_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="@string/tv_shop_order_no_data"
+        android:visibility="gone" />
+</LinearLayout>
+
+</LinearLayout>

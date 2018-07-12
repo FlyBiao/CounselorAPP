@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical" >
+
+        <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+            android:id="@+id/iv_shop_staff_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="40.0dip" >
+
+            <TextView
+                android:id="@+id/tv_shop_staff_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:textColor="@color/base_title_color"
+                android:ellipsize="end" 
+                android:singleLine="true"
+                android:maxWidth="90dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_shop_staff_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/text_color_gray_3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_shopstaff_status"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="25dp"
+            android:drawableRight="@drawable/right_back"
+            />
+    </RelativeLayout>
+    	<View style="@style/common_divider_line" 
+			  android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

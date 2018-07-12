@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="permissions">
+        <item>@string/permission_recode_audio_hint</item>
+        <item>@string/permission_get_accounts_hint</item>
+        <item>@string/permission_read_phone_hint</item>
+        <item>@string/permission_call_phone_hint</item>
+        <item>@string/permission_camera_hint</item>
+        <item>@string/permission_access_fine_location_hint</item>
+        <item>@string/permission_access_coarse_location_hint</item>
+        <item>@string/permission_read_external_hint</item>
+        <item>@string/permission_white_external_hint</item>
+    </string-array>
+    
+    
+    <!-- 索引测试数据 -->
+    <!--<string-array name="provinces">-->
+        <!--<item>张海丽</item>-->
+        <!--<item>莫海霞</item>-->
+        <!--<item>陈留</item>-->
+        <!--<item>薛海琪</item>-->
+        <!--<item>王凤</item>-->
+        <!--<item>冯海</item>-->
+        <!--<item>莫海路</item>-->
+        <!--<item>林晓晓</item>-->
+        <!--<item>庄东</item>-->
+        <!--<item>林琳</item>-->
+        <!--<item>秦海璐</item>-->
+        <!--<item>曲筱绡</item>-->
+        <!--<item>小蚯蚓</item>-->
+        <!--<item>樊胜美</item>-->
+        <!--<item>安迪</item>-->
+        <!--<item>马海生</item>-->
+        <!--<item>顾峰</item>-->
+        <!--<item>林清峰</item>-->
+
+    <!--</string-array>-->
+    
+</resources>

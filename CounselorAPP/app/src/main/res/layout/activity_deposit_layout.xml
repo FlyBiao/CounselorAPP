@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/base_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl_deposit_info"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/il_deposit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提现"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_deposit_info"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16.0dip"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="可提现"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/t3" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/tv_deposit_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_title_bar"
+                    android:textSize="30sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="元"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deposit_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_deposit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_deposit_money_bg"
+            android:hint="请输入提现金额"
+            android:inputType="number"
+            android:padding="@dimen/size_15"
+            android:singleLine="true"
+            android:textSize="14sp" />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="20dp"
+	            android:src="@drawable/deposit"
+	            android:layout_gravity="center"
+                />
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="3dp"
+	            android:text="提现金额不得小于5元,金额只能为整数！"
+	            android:layout_gravity="center"
+	            android:textSize="12sp"
+	            android:textColor="@color/result_minor_text" />
+        
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_deposit_up"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size_25"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_deposit"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+        	android:paddingBottom="5dp"
+        	android:background="@drawable/button_ellipse_blue_bg"
+            android:gravity="center"
+            android:text="我要提现"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_deposit_record"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+          android:id="@+id/btn_deposit_record"
+          android:layout_width="fill_parent"
+          android:layout_height="42.0dip"
+          android:layout_marginLeft="27dp"
+          android:layout_marginRight="27dp"
+          android:background="@drawable/button_session_bg"
+          android:gravity="center"
+          android:text="提现记录"
+          android:textColor="@color/color_title_bar"
+          android:textSize="16.0sp" />
+    </LinearLayout>
+    
+    </LinearLayout>
+
+</RelativeLayout>

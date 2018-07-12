@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/darkcyan">
+
+
+    <include layout="@layout/base_title"/>
+
+    <ScrollView
+        android:id="@+id/sv_shop_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_content_bg"
+        android:visibility="visible"
+        android:fillViewport="true">
+
+
+            <WebView
+                android:id="@+id/wv_shop_sell_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+    </ScrollView>
+
+</LinearLayout>

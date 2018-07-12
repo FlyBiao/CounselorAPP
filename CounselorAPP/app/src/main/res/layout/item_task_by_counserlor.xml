@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/size_40"
+      android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/lightslategrey"
+        android:orientation="vertical">
+      <TextView
+          android:id="@+id/tv_member_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="店员"
+          android:textColor="@color/white"/>
+      <TextView
+          android:id="@+id/tv_member_sum"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="会员数"
+          android:textColor="@color/colorAccent1"/>
+    </LinearLayout>
+
+    <View style="@style/common_shuli_divider_line"/>
+
+    <TextView
+        android:id="@+id/tv_task_sum"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="任务数"/>
+
+    <View style="@style/common_shuli_divider_line"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+      <TextView
+          android:id="@+id/tv_finish_service_sum"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/size_5"
+          android:layout_marginRight="@dimen/size_5"
+          android:text="|"/>
+      <TextView
+          android:id="@+id/tv_finish_service_progress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/darkorange"
+          android:text="0%"/>
+    </LinearLayout>
+
+    <View style="@style/common_shuli_divider_line"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+      <TextView
+          android:id="@+id/tv_go_shop_sum"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/size_5"
+          android:layout_marginRight="@dimen/size_5"
+          android:text="|"/>
+      <TextView
+          android:id="@+id/tv_go_shop_progress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/darkorange"
+          android:text="0%"/>
+    </LinearLayout>
+
+    <View style="@style/common_shuli_divider_line"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+      <TextView
+          android:id="@+id/tv_buill_sum"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/size_5"
+          android:layout_marginRight="@dimen/size_5"
+          android:text="|"/>
+      <TextView
+          android:id="@+id/tv_buill_progress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/darkorange"
+          android:text="0%"/>
+    </LinearLayout>
+
+    <View style="@style/common_shuli_divider_line"/>
+
+    <TextView
+        android:id="@+id/tv_TaskSums"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="金额"/>
+  </LinearLayout>
+
+  <View style="@style/common_divider_line"/>
+
+</LinearLayout>

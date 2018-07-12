@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_info"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+        	android:layout_marginTop="15dp" >
+
+            <LinearLayout
+                android:id="@+id/iv_userCenter_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="个人中心"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_user_info"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/ll_head"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_70dp"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/setting_user_title"
+                    android:textColor="@color/text_color_gray_1"
+                    android:textSize="16sp" />
+
+                <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+                    android:id="@+id/iv_user_head_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/head" />
+
+                <!-- <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/setting_right_allow" /> -->
+            </LinearLayout>
+
+            <View
+                style="@style/common_divider_line_paddingLeft_15"
+                android:layout_marginRight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_set_nick"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/include_user_nick"
+                    layout="@layout/item_my_nick_setting" />
+            </LinearLayout>
+
+            <View
+                style="@style/common_divider_line_paddingLeft_15"
+                android:layout_marginRight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_set_signature"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/include_user_signature"
+                    layout="@layout/include_user_signature" />
+            </LinearLayout>
+
+            <View
+                style="@style/common_divider_line_paddingLeft_15"
+                android:layout_marginRight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_set_account"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/include_user_account"
+                    layout="@layout/item_my_account_setting" />
+            </LinearLayout>
+
+            <View
+                style="@style/common_divider_line_paddingLeft_15"
+                android:layout_marginRight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_set_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_common_list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/include_set_pwd"
+                    layout="@layout/item_my_pwd_setting" />
+            </LinearLayout>
+
+            <View
+            style="@style/common_divider_line_paddingLeft_15"
+            android:layout_marginRight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/my_earnings"
+              android:layout_width="fill_parent"
+              android:layout_height="50.0dip"
+              android:background="@drawable/selector_common_list_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/item_label_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/text_color_gray_1"
+                    android:textSize="16.0sp"
+                    android:text="我的收益"/>
+
+                <TextView
+                    android:id="@+id/item_label_value"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="查看"
+                    android:textColor="@color/text_color_gray_3"
+                    android:textSize="14.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/setting_right_allow"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+   </LinearLayout>
+
+    <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="25dp"
+               android:layout_marginRight="25dp"
+               android:layout_marginBottom="33dp"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true">
+
+       <Button
+           android:id="@+id/btn_exit_login"
+           android:layout_width="fill_parent"
+           android:layout_height="40.0dip"
+           android:background="@drawable/button_ellipse_red_bg"
+           android:gravity="center"
+           android:text="退出登录"
+           android:textColor="@color/white"
+           android:textSize="16.0sp" />
+   </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_base_bg"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_user_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户中心"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+    
+    <!-- 用户信息开始 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/selector_common_list_bg"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_set_user_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" 
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp">
+
+                    <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+                        android:id="@+id/iv_user_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/iv_user_icon"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_my_name"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_my_shop"
+                            android:layout_width="220dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:drawablePadding="8dp"
+                            android:paddingTop="5dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                        <LinearLayout
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_alignParentRight="true"
+		                    android:orientation="horizontal"
+		                    android:layout_marginTop="15dp"
+		                    android:gravity="center">
+		
+		                    <TextView
+		                        android:id="@+id/tv_my_grade"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:textSize="14sp"/>
+		
+		                    <TextView
+		                        android:id="@+id/tv_order_sums_today"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:textSize="34sp" 
+		                        android:layout_marginLeft="10dp"
+		                        android:drawableRight="@drawable/icon_right_allow" />
+                </LinearLayout>
+                </RelativeLayout>
+                <View style="@style/common_divider_line" android:layout_below="@id/rl_set_user_info"/>
+            </RelativeLayout>
+            
+            <!-- 用户信息结束 -->
+    <View style="@style/common_divider_line" />
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_earnings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        >
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/earningss"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="收益"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" />
+    
+    <LinearLayout
+        android:id="@+id/ll_ranking"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        android:visibility="visible" >
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/rankings"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="排行榜"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" />
+    
+    <LinearLayout
+        android:id="@+id/ll_labes"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        android:visibility="visible" >
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/rankings"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="标签"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" />
+    
+    <LinearLayout
+        android:id="@+id/ll_sales_talk"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        android:visibility="gone" >
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/rankings"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="话术"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" />
+    
+    <LinearLayout
+        android:id="@+id/ll_shop_manage"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip"
+        android:visibility="gone" >
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/shop_manage"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="店铺管理"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+    <View 
+        android:id="@+id/view_line_h"
+        style="@style/common_divider_line" 
+        android:visibility="gone"/>
+	</LinearLayout>
+    <View style="@style/common_divider_line" />
+
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_help"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/helpes"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="5dp"
+             android:text="帮助"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_my_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/selector_common_list_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16.0dip" >
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/setings"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="设置"
+             android:layout_marginLeft="5dp"
+             android:textSize="14sp" />
+        <TextView
+	        android:layout_width="0.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="15dp"
+	        android:layout_weight="1.0"
+	        android:gravity="right"
+	        android:drawableRight="@drawable/icon_right_allow"/>
+    </LinearLayout>
+    <View style="@style/common_divider_line" />
+    
+	</LinearLayout>
+    
+
+    <LinearLayout
+        android:id="@+id/ll_exit_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/bt_logout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/button_login_bg"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+    
+    </LinearLayout>
+    
+    </LinearLayout>

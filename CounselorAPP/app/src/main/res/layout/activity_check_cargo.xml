@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical" >
+    
+    
+    <RelativeLayout
+        android:id="@+id/rl_check_cargo"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_check_cargo_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="验货"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_check_cargo"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/tv_scan_cargo"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="@drawable/button_ellipse_blue_bg"
+				android:textSize="@dimen/font_14"
+                android:text="扫描验货"
+                android:textColor="@color/white"/>
+            
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                
+                <EditText
+	                android:id="@+id/et_cargo_code"
+	                android:layout_width="match_parent"
+	                android:layout_height="45dp"
+	                android:background="@drawable/button_session_bg"
+	                android:digits="@string/register_name_digits"
+	                android:focusableInTouchMode="true"
+	                android:hint="请输入 商品编码"
+	                android:inputType="text|number"
+	                android:longClickable="false"
+	                android:textColor="@color/c1"
+	                android:textColorHint="@color/c3"
+	                android:paddingLeft="20dp"
+	                android:textCursorDrawable="@null"
+	                android:textSize="@dimen/font_14" />
+                
+                <Button
+		            android:id="@+id/btn_scan_check_cargo"
+		            android:layout_width="70dp"
+		            android:layout_height="45dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_alignParentRight="true"
+		            android:background="@drawable/button_login_bg"
+		            android:gravity="center"
+		            android:text="手动验货"
+		            android:textColor="@color/white"
+		            android:textSize="@dimen/font_14" />
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+        <ListView
+	        android:id="@+id/lv_check_cargo_info"
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent" 
+	        android:visibility="visible">
+    </ListView>
+        
+    </LinearLayout>
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_check_cargo_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/new_base_bg"
+                android:gravity="center"
+                android:text="选择物流"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

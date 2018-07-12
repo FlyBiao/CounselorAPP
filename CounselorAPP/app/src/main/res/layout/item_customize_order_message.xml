@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share_btn_nor"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/iv_customize_imgUrl"
+            android:orientation="vertical"
+             >
+            <TextView
+                android:id="@+id/tv_custom_order_message_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您收到新的订单！可以抢单进行发货！"
+                android:textColor="@color/c1"
+                android:textSize="14sp" />
+            
+
+            <TextView
+                android:id="@+id/tv_customize_orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单号"
+                android:textColor="@color/c1"
+                android:textSize="14sp" />
+
+            <!-- <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_no1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下单时间:"
+                    android:textColor="#ff707070"
+                    android:textSize="14sp" />
+                
+                <TextView
+                    android:id="@+id/tv_customize_order_cratedate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_no1"
+                    android:text="90"
+                    android:textColor="#ff707070"
+                    android:textSize="14sp" />
+
+            </RelativeLayout> -->
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

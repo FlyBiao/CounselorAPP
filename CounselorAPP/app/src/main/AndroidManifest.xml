@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.cesaas.android.counselor.order">
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <!-- <uses-permission android:name="com.cesaas.android.ekawuyou.permission.JPUSH_MESSAGE" /> -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <!-- 二维码权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 获取联系人信息，发送通讯录消息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <application
+        android:name=".global.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".WelcomesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dialog.SearchDialog"
+            android:theme="@style/dialog"
+            android:windowSoftInputMode="stateAlwaysVisible">
+        </activity>
+
+        <!-- 商家注册 -->
+        <activity android:name=".activity.RegisterAactivity"/>
+
+        <!-- 店员管理 -->
+        <activity android:name=".staffmange.ShopStaffListActivity"/>
+        <activity android:name=".staffmange.AddShopStaffActivity"/>
+        <activity android:name=".staffmange.CreateShopStaffQrCodeActivity"/>
+        <activity android:name=".staffmange.ShopStaffDetailActivity"/>
+        <activity android:name=".staffmange.UpdateShopStaffActivity"/>
+        <activity
+            android:name=".staffmange.ShopStaffMangerActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <!-- 店员考试 -->
+        <activity android:name=".stafftest.TestListActivity"/>
+        <activity android:name=".stafftest.StaffTestActivity"/>
+        <activity android:name=".stafftest.StaffTestListActivity"/>
+
+        <!-- 门店陈列 -->
+        <activity android:name=".store.StoreDisplayActivity"/>
+        <activity android:name=".store.StoreDisplayDetailActivity"/>
+        <activity android:name=".store.DisplayApprovalActivity"/>
+        <activity android:name=".store.DisplayApprovalPassActivity"/>
+        <activity android:name=".store.DisplayOverdueActivity"/>
+        <activity android:name=".store.DisplayApprovalCompleteActivity"/>
+        <activity android:name=".store.DisplayTaskApprovalActivity"/>
+        <activity android:name=".store.DisplayApprovalListActivity"/>
+
+        <!-- 店铺任务 -->
+        <activity android:name=".task.fragment.ShopTaskDetailActivity"/>
+
+        <!-- 微信拉粉 -->
+        <activity android:name=".activity.WXLaFansActivity"/>
+
+        <!-- 店铺管理 -->
+        <activity android:name=".shopmange.ShopMangeActivity"/>
+        <activity
+            android:name=".shopmange.ShopMangerTestActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name=".shopmange.ShopMangerSearchActivity"/>
+        <activity android:name=".activity.GetShopActivity"/>
+
+        <!-- 门店报数 -->
+        <activity android:name=".stores.AddStoresCountOffActivity"/>
+        <!-- 业绩管理 -->
+        <activity android:name=".stores.PerformanceMangerActivity"/>
+
+        <!-- 培训相关 -->
+        <activity android:name=".training.TrainingRelatedActivity"/>
+        <activity android:name=".training.TrainingRelatedDetailActivity"/>
+
+        <!-- 订单管理 -->
+        <activity android:name=".ordermange.OrderMangerActivity"/>
+        <activity android:name=".OrderActivity"/>
+        <activity android:name=".ordermange.ShopOrderActivity"/>
+        <activity android:name=".activity.OrderShopDetailActivity"/>
+        <activity android:name=".activity.OrderInfoDetailActivity"/>
+
+        <!-- 日历 -->
+        <activity android:name=".calendar.ADCircleCalendarActivity"/>
+        <activity android:name=".calendar.CircleCalendarActivity"/>
+        <activity android:name=".calendar.GridCalendarActivity"/>
+
+        <!-- 报数 -->
+        <activity android:name=".calendar.CountOffDetailActivity"/>
+
+        <!-- 群发消息 -->
+        <activity android:name=".fans.activity.GroupSendMessageAactivity">
+        </activity>
+        <activity android:name=".fans.activity.GroupSendAactivity">
+        </activity>
+
+        <!-- 粉丝标签 -->
+        <activity android:name=".fans.activity.LabelCategoryListActivity"/>
+        <activity android:name=".fans.activity.FansLabelDetailAactivity"/>
+        <activity android:name=".label.LabelListAactivity"/>
+        <activity android:name=".fans.activity.AddCreateLabelActivity"/>
+        <activity android:name=".fans.activity.VipDetailActivity"/>
+        <activity android:name=".label.EditTagActivity"/>
+        <activity android:name=".popupwindow.TagCategoryPopWindow"/>
+        <activity android:name=".fans.activity.SerachTagListActivity"/>
+        <activity android:name=".fans.activity.SetFansRemarkActivity"/>
+
+        <!-- 测试 -->
+        <activity
+            android:name=".projecttest.FansActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <!--
+            <activity
+            android:name=".projecttest.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        -->
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".activity.VipActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+
+        <!--
+              <activity
+             android:name="com.cesaas.android.counselor.order.MainActivity"
+             android:label="@string/app_name"
+             android:screenOrientation="portrait"
+             android:windowSoftInputMode="adjustNothing|stateHidden" />
+        -->
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.UserCentreActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ModifyNickActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ModifyPwdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ShopDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ReceiveOrderDetailAactivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.GetO2OOrderListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ScanSendDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.MyAllOrderStateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.PushOrderDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.CustomSendOrderDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ReceiveOrderAactivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.getO2OOrderDetaliActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.SerachVipActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+
+        <!-- 二维码 条形码扫描页面 -->
+
+        <activity
+            android:name="cn.hugo.android.scanner.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+
+        <!--
+        扫描结果页面 【此处是调用内部类Activity的方式，前提是必须是static】
+        <activity
+            android:name="com.cesaas.android.counselor.order.adapter.AllOrderStateAdapter$getScanResult"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden" >
+
+        </activity>
+        -->
+
+
+        <!-- Demo测试 -->
+
+        <activity android:name=".imagepicker.PickerDisplayImageActivity"/>
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <!--
+        <activity android:name="com.cesaas.android.counselor.order.demo.activity.MomentListActivity"></activity>
+        <activity android:name="com.cesaas.android.counselor.order.demo.activity.MomentAddActivity"></activity>
+        -->
+
+        <activity android:name=".pos.CreatePayQRImageViewActivity"/>
+        <!-- <activity android:name=".cashier.activity.DoConsumeActivity"/> -->
+        <activity
+            android:name=".activity.ScanResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name="com.zbar.lib.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.CounselorListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.GetListByShopIdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.WeiXinLaFansActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".activity.ScanSendActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.CheckCargoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".scan.ScanActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.GetUnReceiveOrderActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".earnings.activity.RanKingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+
+        <!-- 佣金详情页面 -->
+        <activity
+            android:name=".activity.EarningsDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".earnings.activity.CommisionDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+
+        <!-- 推荐佣金页面 -->
+        <activity
+            android:name=".earnings.activity.CommisionDevelopActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".earnings.activity.RankingTypeLinkActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+
+        <!-- 发货佣金页面 -->
+        <activity
+            android:name=".earnings.activity.CommisionSendActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".earnings.activity.SendCommisionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".earnings.activity.EarningsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.ShopManageActvity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".express.view.ExpressListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".express.view.SendExpressActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+
+        <!-- 收银 -->
+        <activity android:name=".cashier.activity.CashierActivity">
+        </activity>
+        <activity android:name=".cashier.activity.CashierRemarkActivity">
+        </activity>
+        <activity android:name=".cashier.activity.CashierHomeActivity">
+        </activity>
+        <activity android:name=".pos.CashierMainActivity">
+        </activity>
+
+        <!-- 会员标签 -->
+        <activity
+            android:name=".label.VipLabelListAactivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".view.search.SearchResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.GetShopOrderActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".earnings.activity.OrderEarningsDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.GetUnReceiveOrderDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.ExpressActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".earnings.activity.DevelopCommisonActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".express.view.ExpressQueryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.GetByKeyWordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.DepositActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.DepositRecordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.GetShopFansDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".express.view.O2OOrderHelpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".express.view.SendExpressRemarkActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+
+        <!-- Fans会话页面 -->
+        <activity
+            android:name=".rong.activity.FansConversationAactivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".fans.fragment.MyFansActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity
+            android:name=".rong.activity.WebViewShopActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".rong.activity.SalesTalkProviderActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+
+        <!-- 会话页面 -->
+        <activity
+            android:name=".rong.activity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.cesaas.android.counselor.order"
+                    android:pathPrefix="/conversation"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".rong.activity.PushConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.cesaas.android.counselor.order"
+                    android:pathPrefix="/pushconversation"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 会话列表 -->
+        <activity
+            android:name=".rong.activity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.cesaas.android.counselor.order"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".rong.activity.PushConversationListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.cesaas.android.counselor.order"
+                    android:pathPrefix="/pushconversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name=".rong.activity.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.cesaas.android.counselor.order"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 配置广播拦截短信 -->
+        <receiver android:name=".custom.receiver.SmsRecevier">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 高德地图服务和KEY -->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- //开发者申请的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="17f624ea436a072cdf6622926751e9d2">
+        </meta-data>
+
+        <!-- 必选： SDK 核心功能 -->
+        <!-- 第三方相关,向第三方推送服务请求 token 的服务 -->
+        <!-- 融云的广播和服务 -->
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc"/>
+        <service android:name="io.rong.imlib.ReConnectService"/>
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver"/>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc"/>
+
+        <service
+            android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false">
+        </service>
+
+        <!-- 处理 push 消息相关的服务 -->
+        <service
+            android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true">
+        </service>
+
+        <!-- push服务 -->
+        <service
+            android:name="io.rong.push.PushService"
+            android:exported="false"
+            android:process="io.rong.push"> <!-- push进程，可以改名 -->
+        </service>
+
+        <!-- push 相关事件接收器 -->
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push">
+
+            <!-- 此处进程可以改名，名称需要和PushService所在进程统一 -->
+
+
+            <!-- 心跳事件 -->
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT"/>
+            </intent-filter>
+            <!-- 网络变动事件 -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- 部分用户事件 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 必选： SDK 核心功能 -->
+
+        <activity
+            android:name="io.rong.imkit.tools.SelectPictureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="io.rong.imkit.tools.PreviewPictureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="io.rong.imkit.tools.RongWebviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="io.rong.imkit.widget.provider.TakingPicturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- 接受app推送消息 -->
+        <!--  -->
+        <receiver
+            android:name=".rong.message.AppPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 融云测试 环境 -->
+         <!--<meta-data-->
+         <!--android:name="RONG_CLOUD_APP_KEY"-->
+         <!--android:value="ik1qhw091mn5p"/>-->
+
+
+        <!-- 融云生产环境 -->
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="pwe86ga5eok76"/>
+
+        <activity android:name=".statistics.ReportStatisticsActivity">
+        </activity>
+        <activity android:name=".statistics.AffiliateTopActivity">
+        </activity>
+        <activity android:name=".statistics.DirectSellingTopActivity">
+        </activity>
+        <activity android:name=".statistics.SalesContrastActivity">
+        </activity>
+        <activity android:name=".statistics.SalesOverviewActivity">
+        </activity>
+        <activity android:name=".statistics.CompleteContrastActivity">
+        </activity>
+        <activity android:name=".activity.order.OrderDataStatisticsActivity">
+        </activity>
+        <activity android:name=".activity.user.VipDataStatisticsActivity">
+        </activity>
+        <activity android:name=".activity.user.VipDataScreenActivity">
+        </activity>
+        <activity android:name=".activity.order.OrderDataScreenActivity">
+        </activity>
+        <activity
+            android:name=".statistics.SalesThanScreenActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".signin.SigninRecordActivity">
+        </activity>
+        <activity
+            android:name=".signin.SigninActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".signin.map.MapFixedPointActivity">
+        </activity>
+        <activity
+            android:name=".report.ReportCenterActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".report.MySubscriptionActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".report.ReportDetailActivity">
+        </activity>
+        <activity android:name=".task.TaskCenterActivity">
+        </activity>
+        <activity android:name=".task.MyTaskActivity">
+        </activity>
+        <activity android:name=".task.TaskCenterDetailActivity">
+        </activity>
+        <activity android:name=".task.MyTaskDetailActivity">
+        </activity>
+        <activity android:name=".member.SendMessageActivity">
+        </activity>
+        <activity android:name=".shop.fragment.ProductDetailActivity">
+        </activity>
+        <activity android:name=".workbench.activity.ShopVisitActivity">
+        </activity>
+        <activity
+            android:name=".workbench.activity.ReturnVisitActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".workbench.activity.DisplayActivity">
+        </activity>
+        <activity android:name=".workbench.activity.WorkListActivity">
+        </activity>
+        <activity android:name=".workbench.activity.ReturnVisitDetailActivity">
+        </activity>
+        <activity
+            android:name=".member.MemberDistributionActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".member.MemberListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".member.MemberDistributionDetailActivity">
+        </activity>
+        <activity android:name=".member.MessageListActivity">
+        </activity>
+        <activity android:name=".member.MessageGroupActivity">
+        </activity>
+        <activity
+            android:name=".shoptask.view.ShopTaskListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".report.TryWearDataActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".member.CounselorListActivity">
+        </activity>
+        <activity android:name=".report.PerformanceDistributionActivity">
+        </activity>
+        <activity android:name=".member.MemberPortraitActivity">
+        </activity>
+        <activity android:name=".report.CountOffActivity">
+        </activity>
+        <activity android:name=".activity.main.HomeActivity">
+        </activity>
+        <activity android:name=".report.IntoManagerActivity">
+        </activity>
+        <activity android:name=".report.TryReportActivity">
+        </activity>
+        <activity android:name=".report.IntoReportActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopCollocationActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopSalesActivity">
+        </activity>
+        <activity android:name=".shopmange.ShoppingGuideActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopPerformanceActivity">
+        </activity>
+        <activity android:name="com.cesaas.android.testzuofei.TestLoginActivity"/>
+        <activity android:name=".shopmange.ShopActivityListActivity">
+        </activity>
+        <activity android:name=".report.PerformanceDetailActivity">
+        </activity>
+        <activity android:name=".activity.user.SetUserSignatureActivity">
+        </activity>
+        <activity
+            android:name=".shopmange.RecommendShopListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".member.BusinessActivity">
+        </activity>
+        <activity
+            android:name=".shopmange.InvitationOrderListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".salestalk.activity.SelectSalesTalkActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".shopmange.ShopSelectActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".activity.user.register.RegisterActivity">
+        </activity>
+        <activity android:name=".shoptask.view.HandleTaskActivity">
+        </activity>
+        <activity android:name=".shoptask.view.PassOnToActivity">
+        </activity>
+        <activity
+            android:name=".shopmange.ChooseClerkActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".shoptask.view.TaskFlowActivity">
+        </activity>
+        <activity android:name=".activity.user.password.ForgotPasswordActivity">
+        </activity>
+        <activity android:name=".activity.user.password.ResetPasswordActivity">
+        </activity>
+        <activity android:name=".zoomimageview.PreviewImageActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopTagListActivity">
+        </activity>
+        <activity android:name=".shopmange.AddInvitationOrderActivity">
+        </activity>
+        <activity android:name=".shopmange.GoodsCollocationActivity">
+        </activity>
+        <activity android:name=".salestalk.activity.SelectVerbalTrickActivity">
+        </activity>
+        <activity
+            android:name=".member.VipListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity
+            android:name=".shopmange.ShopMatchListActivity"
+            android:windowSoftInputMode="adjustNothing|stateHidden">
+        </activity>
+        <activity android:name=".activity.user.BindPublicNoActivity">
+        </activity>
+        <activity android:name=".member.ConversationListActivity">
+        </activity>
+        <activity android:name=".activity.user.MessageActivity">
+        </activity>
+        <activity android:name=".activity.user.MessageDetailActivity">
+        </activity>
+        <activity android:name=".member.VipSearchActivity">
+        </activity>
+        <activity android:name=".apptest.TestActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopSearchActivity">
+        </activity>
+        <activity android:name=".activity.user.NoticeListActivity">
+        </activity>
+        <activity android:name=".activity.user.NoticeDetailActivity">
+        </activity>
+        <activity android:name=".shopmange.ClerkManageActivity">
+        </activity>
+        <activity android:name=".shopmange.FilterClerkActivity">
+        </activity>
+        <activity android:name=".shopmange.ClerkDetailActivity">
+        </activity>
+        <activity android:name=".shopmange.ClerkSearchActivity">
+        </activity>
+        <activity android:name=".shopmange.ShopMatchSearchActivity">
+        </activity>
+        <activity android:name="com.cesaas.android.order.ui.activity.NewOrderActivity">
+        </activity>
+        <activity android:name="com.cesaas.android.order.ui.activity.ReceiveOrderDetailActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.BossMainActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.OnLineShopActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.ShopSellNumberActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.StoreSalesActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.SelectShopActivity">
+        </activity>
+        <activity android:name=".activity.ResultsQueryActivity">
+        </activity>
+        <activity android:name=".activity.main.SuperMainActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.VipTargetActivity">
+        </activity>
+        <activity android:name=".boss.ui.activity.BossUserInfoActivity">
+        </activity>
+        <activity android:name=".inventory.ui.InventoryMainActivity">
+        </activity>
+        <activity android:name=".inventory.ui.CreateInventoryActivity">
+        </activity>
+        <activity android:name=".inventory.ui.InventoryDifferenceActivity">
+        </activity>
+        <activity android:name=".inventory.ui.InventoryDetailsActivity">
+        </activity>
+        <activity android:name=".inventory.ui.CheckInventoryDifferenceActivity">
+        </activity>
+        <activity
+            android:name=".scan.ZxingScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inventory.ui.InventoryRecordActivity">
+        </activity>
+        <activity android:name=".inventory.ui.InventoryShelvesDetailsActivity"/>
+        <activity android:name=".manager.ui.activity.ManagerMainActivity"/>
+        <activity android:name=".manager.ui.activity.AddShopTaskActivity"/>
+        <activity android:name=".manager.ui.activity.TaskMainActivity"/>
+        <activity android:name=".manager.ui.activity.TaskDetailsActivity"/>
+        <activity android:name=".manager.ui.activity.DetailsActivity"/>
+        <activity android:name=".manager.ui.activity.TaskFlowActivity"/>
+        <activity android:name=".report.WebViewDetailsActivity"/>
+        <activity android:name=".boss.ui.activity.DailyActivity"/>
+        <activity android:name=".activity.user.vip.MemberPortraitActivity"/>
+        <activity android:name=".member.StyleRecommendActivity"/>
+        <activity android:name=".boss.ui.activity.QueryShopActivity"/>
+        <activity android:name=".boss.ui.activity.QueryReportActivity"/>
+        <activity android:name=".boss.ui.activity.shop.ShopMainActivity"/>
+        <activity android:name=".boss.ui.activity.shop.MerchantReportActivity"/>
+        <activity android:name=".activity.main.NewMainActivity"/>
+        <activity android:name=".activity.TaskNewActivity"/>
+        <activity android:name=".member.service.MemberServiceActivity"/>
+        <activity android:name=".member.service.QueryMemberActivity"/>
+        <activity android:name=".member.service.MemberServiceCheckActivity"/>
+        <activity android:name=".member.service.MemberServiceInfoActivity"/>
+        <activity android:name=".member.service.MemberServiceCheckDetailActivity"/>
+        <activity android:name=".member.service.MemberReturnVisitDetailActivity"/>
+        <activity android:name=".member.service.MemberSwitchShopActivity"/>
+        <activity android:name=".member.service.MemberInfoUpdateListActivity"/>
+        <activity android:name=".member.service.MemberUpdateDetailActivity"/>
+        <activity android:name=".member.service.MemberServiceResultActivity"/>
+        <activity android:name=".member.service.MemberServiceBirthInfoActivity"/>
+        <activity android:name=".member.service.MemberServiceFestInfoActivity"/>
+        <activity android:name=".member.service.MemberServiceDormancyInfoActivity"/>
+        <activity android:name=".member.service.MemberServiceCustomInfoActivity"/>
+        <activity android:name=".member.service.MemberReturnServiceInfoActivity"/>
+        <activity android:name=".activity.user.AppSettingActivity"/>
+        <activity android:name=".member.service.MemberLoyAltyActivity"/>
+        <activity android:name=".activity.user.ITSupportActivity"/>
+        <activity android:name=".scan.AppZxingScanActivity"/>
+        <activity android:name=".boss.ui.activity.NewBossMainActivity"/>
+        <activity android:name=".activity.CheckCargoOrderRouteActivity"/>
+        <activity android:name=".express.view.ExpressListOrderRouteActivity"/>
+        <activity android:name=".express.view.SendExpressOrderRouteActivity"/>
+        <activity android:name=".express.view.ExpressQueryRouteActivity"/>
+        <activity android:name=".member.service.MemberServiceResultActivitys"/>
+        <activity android:name=".member.service.FaceListActivity"/>
+        <activity android:name=".member.service.MemberReturnVisitDetailsActivity"/>
+        <activity android:name=".scan.AppNewScanActivity"/>
+        <activity android:name=".boss.ui.activity.shop.ScanShopActivity"/>
+        <activity android:name=".boss.ui.activity.shop.ScanVipActivity"/>
+        <activity android:name=".member.service.MemberResultsActivity"/>
+        <activity android:name=".member.service.MemberCounselorResultsActivity"/>
+        <activity android:name=".shopmange.SelectClerkManageActivity"/>
+        <activity android:name="com.cesaas.android.order.ui.activity.AddOrderRemarkActivity"/>
+        <activity android:name=".member.service.MemberDistributionNewActivity"/>
+        <activity android:name=".shopmange.ClerkManageNewActivity"/>
+        <activity android:name=".member.service.MemberTagListActivity"/>
+        <activity android:name=".member.MemberNewDistributionDetailActivity"/>
+        <activity android:name=".member.service.MemberNewTagListActivity"/>
+        <activity android:name=".boss.ui.activity.member.MemberServiceAnalysisActivity"/>
+        <activity android:name=".boss.ui.activity.member.DateScreeningActivity"/>
+        <activity android:name=".member.service.MemberServiceContinueActivity"/>
+        <activity android:name=".boss.ui.activity.member.ServiceAnalysisDetailsActivity"/>
+        <activity android:name="com.cesaas.android.order.ui.activity.RetailOrderActivity"/>
+        <activity android:name=".member.service.ManagerAssisTantActivity"/>
+        <activity android:name=".member.service.ManagerAssisTantDatailsActivity"/>
+        <activity android:name=".shopmange.ClerkRankingActivity"/>
+        <activity android:name="com.cesaas.android.order.ui.activity.OrderInventoryActivity"/>
+        <activity android:name=".member.volume.SendVolumeActivity"/>
+        <activity android:name=".member.volume.PushListActivity"/>
+        <activity android:name=".member.GroupSendMessageActivity"/>
+        <activity android:name=".member.volume.TicketReportActivity"/>
+        <activity android:name=".boss.ui.activity.member.SingleShopMemberServiceAnalysisActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.move.MoveDeliveryListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.receive.ReceiveListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.returns.ReturnListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.require.RequireListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.notice.NoticeOrderActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.move.AddTransActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.SelectTransActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.move.TransPackingActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.SetTransPackingExpressActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.move.MoveDeliveryDetailsActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.move.MoveDeliveryBoxDetailsActivity"/>
+        <activity android:name=".scan.ZxingScanBoxActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.receive.ReceiveGetBoxListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.receive.ReceiveCheckDifferenceActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.receive.ReceiveDetailsActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.receive.ReceiveBoxDetailsActivity"/>
+        <activity android:name=".scan.ZxingScanReceiveBoxActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.require.RequierDetailsActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.require.AddRequireActivity"/>
+        <activity android:name=".scan.ZxingScanRequierActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.notice.NoticeDetailsActivity"/>
+        <activity android:name=".member.salestalk.SalesTalkListActivity"/>
+        <activity android:name=".member.salestalk.SalesTalkCustomListActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.review.ReviewActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.SelectShopActivity"/>
+        <activity android:name=".boss.ui.activity.member.DateScreenActivity"/>
+        <activity android:name=".boss.ui.activity.shop.ShopResultsActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.school.SchoolMainActivity"/>
+        <activity android:name="com.cesaas.android.java.ui.activity.school.SchoolCourseDetailsActivity"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_title_bar" >
+
+            <ImageView
+                android:id="@+id/iv_back_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_edit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/send_commission"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title_bar" 
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_commision_send_all"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/myImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher"
+                android:textColor="@color/white"
+                android:text="@string/all" />
+
+            <TextView
+                android:id="@+id/tv_commision_all"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/myImageView"
+                android:layout_marginTop="5dp"
+                android:background="#ffffc600" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_commision_send_settlement"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="0.5dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/myImageView1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/myImageView1"
+                />
+
+            <TextView
+                android:layout_width="0.5dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/myImageView1"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/myImageView1"
+                />
+
+            <TextView
+                android:id="@+id/myImageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:textColor="@color/white"
+                android:text="@string/await_settled" />
+
+            <TextView
+                android:id="@+id/tv_commision_send_settlement"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/myImageView1"
+                android:layout_marginTop="5dp"
+                android:background="#ffffc600" 
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_commision_send_receive"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/myImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:textColor="@color/white"
+                android:text="@string/ok_order" />
+
+            <TextView
+                android:id="@+id/tv_commision_send_receive"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/myImageView2"
+                android:layout_marginTop="5dp"
+                android:background="#ffffc600"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:background="@drawable/button_ellipse_grade_huise_bg"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_2"
+        android:layout_marginTop="@dimen/size_2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_search_vip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_40"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/search"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_40"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:inputType="text"
+            android:layout_weight="8"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="按手机号，姓名，卡号搜索"
+            android:textColorHint="@color/line"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingTop="@dimen/size_10"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/new_member_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="city_array">
+        <item>福田澳葡街店铺</item>
+        <item>罗湖区黄金店铺</item>
+        <item>华强北店铺</item>
+        <item>龙华金山店</item>
+        <item>华润万象城店铺</item>
+        <item>坂田天虹店</item>
+        <item>布吉华通店</item>
+        <item>南山通透店</item>
+        <item>大芬仁和店</item>
+        <item>金光华店铺</item>
+        <item>银光华店铺</item>
+        <item>阿里巴巴店</item>
+        <item>八卦一路店</item>
+        <item>五和3号店</item>
+        <item>坂田5号店</item>
+        <item>园林9号店</item>
+        <item>布吉7号店</item>
+        <item>铁岭市民主店</item>
+        <item>龙华COCOCITY店</item>
+    </string-array>
+
+    <string-array name="city_join">
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+        <item>深圳加盟店</item>
+    </string-array>
+</resources>

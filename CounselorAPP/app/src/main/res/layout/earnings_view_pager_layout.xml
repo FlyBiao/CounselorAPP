@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"  >
+
+        <LinearLayout
+            android:id="@+id/ll_back_earnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="返回"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="收益"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            
+            <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="个人业绩"
+                android:gravity="center"
+                android:id="@+id/tab_ower"
+                android:textColor="@color/color_title_bar"
+                android:layout_height="match_parent"/>
+            
+             <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="门店业绩"
+                android:id="@+id/tab_shop"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:id="@+id/earnings_line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_title_bar" />
+    </RelativeLayout>
+    <View style="@style/common_divider_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_earnings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+    
+    </LinearLayout>
+
+</LinearLayout>

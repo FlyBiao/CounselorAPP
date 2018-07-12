@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <com.flybiao.adapterlibrary.widget.MyImageViewWidget
+                android:id="@+id/iv_fans_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="11dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_fans_icon"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip" >
+
+                <TextView
+                    android:id="@+id/fans_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:textColor="@color/base_title_color"
+                    android:textSize="16sp" 
+                    android:text="Biao"/>
+                
+                <TextView
+                    android:id="@+id/tv_vip_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/rgb_text_huise"
+                    android:textSize="14sp" 
+                    android:text="Biao"/>
+                
+                <TextView
+                    android:id="@+id/tv_vip_grid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fans_nick"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/rgb_text_huise"
+                    android:textSize="14sp" 
+                    android:text="Biao"/>
+
+                <TextView
+                    android:id="@+id/tv_fans_counselor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/tv_vip_grid"
+                    android:textColor="@color/rgb_text_huise"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <!--
+                 <Button
+                android:id="@+id/btn_iscancel_fans"
+                android:layout_width="60.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/bg_selector_my_btn_yellow"
+                android:text="关注"
+                android:textSize="12sp" />
+            -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/common_divider_line" 
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+</LinearLayout>

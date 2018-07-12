@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10">
+
+        <com.cesaas.android.counselor.order.custom.imageview.CircleImageView
+            android:id="@+id/ivw_contact_icon"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="@dimen/size_60"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/not_user_icon"
+            app:border_imageview_color="@color/white"
+            app:border_imageview_width="1dp"/>
+
+        <CheckBox
+            android:id="@+id/cbCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_15"
+            android:button="@drawable/checkbox_checked_style"
+            android:focusable="false"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_clerk_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_15"
+            android:textColor="@color/base_color"
+            android:text="在职"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_toRightOf="@id/ivw_contact_icon"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="testName"
+                    android:textColor="@color/cinema_detail_tip_bg"
+                    android:textSize="@dimen/font_14"/>
+
+                <TextView
+                    android:id="@+id/tv_clerk_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_3"
+                    android:background="@drawable/button_ellipse_red_bg"
+                    android:padding="@dimen/size_2"
+                    android:text="白金VIP"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_12"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_contact_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="深圳罗湖四威店"
+                    android:textColor="@color/cinema_detail_tip_bg"
+                    android:textSize="@dimen/font_12"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_icon_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/hui"
+                        android:textSize="@dimen/font_18"/>
+                    <TextView
+                        android:id="@+id/tv_contact_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:gravity="center_vertical"
+                        android:text="13430706607"
+                        android:textColor="@color/cinema_detail_tip_bg"
+                        android:textSize="@dimen/font_12"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_icon_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/litlegray"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/font_14"/>
+                    <TextView
+                        android:id="@+id/tv_clerk_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:text="23"
+                        android:textColor="@color/cinema_detail_tip_bg"
+                        android:textSize="@dimen/font_12"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

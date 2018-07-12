@@ -1,0 +1,19 @@
+<!-- tab所需xml -->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/seek_bar_text"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp" 
+        android:gravity="center_vertical"
+        android:background="@color/seek_bar_text"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</HorizontalScrollView>

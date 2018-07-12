@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title_layout"/>
+
+	<RelativeLayout
+		android:id="@+id/rl_approval_action"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@color/seek_bar_text"
+		android:paddingBottom="5dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:orientation="horizontal" >
+
+			<TextView
+				android:id="@+id/tv_approval_through"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="通过"
+				android:textColor="@color/white"
+				android:background="@drawable/button_ellipse_green_bg"
+				android:textSize="14sp" />
+
+			<TextView
+				android:id="@+id/tv_approval_pass"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_marginLeft="10dp"
+				android:layout_weight="1"
+				android:background="@drawable/button_ellipse_red_bg"
+				android:gravity="center"
+				android:text="不通过"
+				android:textColor="@color/white"
+				android:textSize="14sp" />
+		</LinearLayout>
+	</RelativeLayout>
+
+    <ScrollView
+		android:layout_below="@id/ll_base_title"
+		android:layout_above="@id/rl_approval_action"
+		android:background="@color/seek_bar_text"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/size_10"
+		android:paddingTop="16dp"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+			<TextView
+				android:layout_width="@dimen/size_3"
+				android:layout_height="@dimen/size_15"
+				android:layout_marginTop="@dimen/size_3"
+				android:layout_marginRight="@dimen/size_2"
+				android:background="@color/base_text_color"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_5"
+				android:paddingBottom="@dimen/size_5"
+                android:textColor="@color/c1"
+                android:text="任务说明:"/>
+            <TextView
+				android:id="@+id/tv_display_detail_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_marginLeft="16dp"
+				android:layout_marginRight="16dp"
+				android:layout_marginBottom="@dimen/size_10"
+                android:textColor="@color/c1"
+                android:text="加载中。。。"/>
+        </LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/size_8"
+			android:paddingBottom="@dimen/size_10"
+			android:background="@drawable/order_item_bg"
+			android:orientation="horizontal">
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+			android:layout_weight="1"
+            android:orientation="vertical">
+
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_15"
+				android:paddingBottom="@dimen/size_15"
+				android:gravity="center"
+				android:textColor="@color/c1"
+				android:text="参考图片"/>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+				android:layout_marginLeft="@dimen/size_3"
+                android:orientation="vertical">
+                
+                <android.support.v7.widget.RecyclerView  
+			        android:id="@+id/rv_reference_dispaly"  
+			        android:layout_width="wrap_content"  
+			        android:layout_height="wrap_content">  
+    			</android.support.v7.widget.RecyclerView> 
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginLeft="@dimen/size_15"
+            android:orientation="vertical">
+
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_15"
+				android:paddingBottom="@dimen/size_15"
+				android:gravity="center"
+				android:textColor="@color/c1"
+				android:text="完成任务"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:orientation="vertical">
+                
+                <android.support.v7.widget.RecyclerView  
+			        android:id="@+id/rv_complete_dispaly"  
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content">  
+    			</android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+		</LinearLayout>
+
+        <LinearLayout 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+			 android:layout_marginTop="@dimen/size_8"
+			 android:layout_marginLeft="@dimen/size_10"
+			 android:layout_marginBottom="@dimen/size_15"
+             android:orientation="vertical">
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/size_6"
+                android:orientation="horizontal">
+				<TextView
+					android:layout_width="@dimen/size_3"
+					android:layout_height="@dimen/size_15"
+					android:layout_marginTop="@dimen/size_3"
+					android:layout_marginRight="@dimen/size_2"
+					android:background="@color/base_text_color"/>
+	             <TextView 
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:textColor="@color/c1"
+		              android:text="说明与备注"/>
+
+             </LinearLayout>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/c1"
+				android:text="已按照店铺的要求完成门店陈列！"/>
+         </LinearLayout>
+        
+    </LinearLayout>
+	</ScrollView>
+</RelativeLayout>

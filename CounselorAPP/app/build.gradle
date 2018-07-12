@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.cesaas.android.counselor.order"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 77
+        versionName "4.0.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //分包配置方法数超过 64K 的应用
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':Rong_Cloud_Android_IMKit_SDK_v2_7_0_dev')
+    compile project(':CommonAndroid')
+    compile files('libs/aliyun-oss-sdk-android-2.3.0.jar')
+    compile files('libs/apache-httpcomponents-httpcore.jar')
+    compile files('libs/badgeview.jar')
+    compile files('libs/core-3.1.1-SNAPSHOT.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/TinyPinyin.jar')
+    compile files('libs/httpclient-4.2.5.jar')
+    compile project(':imagepicker')
+    compile project(':library')
+    //涂鸦库
+    compile project(':GraffitiLib')
+    compile files('libs/mpchartlib.jar')
+    compile files('libs/okio-1.10.0.jar')
+    //RecyclerView库
+    compile project(':recyclerview-swipe')
+    //slanted-textview斜角库
+    compile project(':materialdialoglibrary')
+    compile project(':basetabview')
+    compile project(':sharelibs')
+    //recyclerview索引列表
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.wx.goodview:goodview:1.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.lzy.widget:view-core:0.2.1'
+    compile 'sing.materialdatetimepicker:library:1.0.1'
+    compile 'com.amap.api:location:latest.integration'
+    compile 'com.amap.api:map3d:latest.integration'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'com.amap.api:map3d-native:latest.integration'
+    compile 'com.haozhang.libary:android-slanted-textview:1.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'me.yokeyword:indexablerecyclerview:1.3.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.8@aar'
+    //RecyclerView库
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.27'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile 'com.jude:rollviewpager:1.4.6'
+    compile project(':lib')
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile files('libs/BASE64Decoder.jar')
+    compile project(':view')
+    compile project(':materialcalendar')
+    compile 'com.zhijieeeeee:pieviewlibrary:2.0.3'
+    compile 'liji.library.dev:citypickerview:3.1.7'
+}

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_title_bar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            
+            <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="待接单"
+                android:gravity="center"
+                android:id="@+id/tab_app"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+            
+             <TextView android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="我的接单"
+                android:id="@+id/tab_game"
+                android:gravity="center"
+               android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/sanjiao" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

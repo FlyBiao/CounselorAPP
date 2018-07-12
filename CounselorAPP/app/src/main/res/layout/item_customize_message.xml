@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/iv_customize_imgUrl"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/selector_common_list_bg"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/iv_customize_imgUrl"
+            android:orientation="vertical"
+            android:paddingLeft="7.0dip" >
+
+            <TextView
+                android:id="@+id/tv_customize_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0-1商品名称"
+                android:textColor="@color/c1"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" 
+                android:layout_marginBottom="7dp">
+
+                <TextView
+                    android:id="@+id/tv_no1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="款号:"
+                    android:textColor="#ff707070"
+                    android:textSize="14sp" />
+                
+                <TextView
+                    android:id="@+id/tv_customize_shopStyleId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_no1"
+                    android:text="90"
+                    android:textColor="#ff707070"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                
+                <TextView
+                    android:id="@+id/tv_customize_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99"
+                    android:visibility="gone"
+                    android:textColor="#fff15151"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

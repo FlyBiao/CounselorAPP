@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flybiao.basetabview.TabView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:tab_text_size="14sp"
+    app:tab_text_select_color="@color/base_color"
+    app:tab_text_un_select_color="@color/text_press"
+    app:tab_gravity="top">
+
+</com.flybiao.basetabview.TabView>

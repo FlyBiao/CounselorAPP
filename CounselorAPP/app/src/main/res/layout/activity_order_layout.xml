@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_pressed"
+              android:orientation="vertical" >
+
+    
+
+    <com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView
+        android:id="@+id/refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:listSelector="@android:color/transparent" >
+
+        <com.cesaas.android.counselor.order.widget.LoadMoreListView
+            android:id="@+id/load_more_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"
+            android:dividerHeight="0dip"
+            android:listSelector="@android:color/transparent" />
+    </com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView>
+
+    <TextView
+        android:id="@+id/tv_order_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂时没有数据"
+        android:visibility="gone" />
+
+</LinearLayout>

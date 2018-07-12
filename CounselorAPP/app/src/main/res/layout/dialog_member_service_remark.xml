@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_180"
+        android:layout_marginTop="@dimen/size_20"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="服务备注"/>
+        <View style="@style/common_divider_line"
+              android:layout_marginTop="@dimen/size_20"/>
+        <EditText
+            android:id="@+id/et_service_remark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_80"
+            android:layout_marginTop="@dimen/size_30"
+            android:paddingTop="@dimen/size_10"
+            android:paddingLeft="@dimen/size_10"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_15"
+            android:enabled="true"
+            android:gravity="top"
+            android:minLines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:background="@drawable/button_ellipse_grade_huise_bg"
+            android:hint="请填写备注(可不填)"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_service_remark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45"
+        android:orientation="horizontal"
+        android:background="@color/new_base_bg">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:gravity="center_vertical|center"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+package com.cesaas.android.counselor.order.member.fragment;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.cesaas.android.counselor.order.R;
+import com.cesaas.android.counselor.order.base.BaseTabBean;
+import com.cesaas.android.counselor.order.base.BaseTabsBean;
+import com.flybiao.basetabview.TabView;
+import com.flybiao.basetabview.TabViewChild;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.rong.eventbus.EventBus;
+
+
+/**
+ * Author FGB
+ * Description
+ * Created at 2018/1/22 17:48
+ * Version 1.0
+ */
+
+public class MemberInfoUpdateFragment extends Fragment {
+
+    private List<TabViewChild> tabViewChildList;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.new_task_fragment_sample, container, false);
+        TabView tabView = (TabView) view.findViewById(R.id.tab_view);
+
+        tabViewChildList= new ArrayList<>();
+        TabViewChild tabViewChild1 = new TabViewChild(R.mipmap.deals, R.mipmap.deal, "待处理", DealMemberInfoFragment.newInstance());
+        TabViewChild tabViewChild2 = new TabViewChild(R.mipmap.completes, R.mipmap.complete, "已同意", CompleteMemberInfoFragment.newInstance());
+        TabViewChild tabViewChild3 = new TabViewChild(R.mipmap.timeouts, R.mipmap.timeout, "已拒绝", RefusedMemberInfoFragment.newInstance());
+        TabViewChild tabViewChild4 = new TabViewChild(R.mipmap.mores, R.mipmap.more_s, "处理超时", TimeOutMemberInfoFragment.newInstance());
+
+        tabViewChildList.add(tabViewChild1);
+        tabViewChildList.add(tabViewChild2);
+        tabViewChildList.add(tabViewChild3);
+        tabViewChildList.add(tabViewChild4);
+
+        tabView.setTabViewChild(tabViewChildList, getChildFragmentManager());
+
+        tabView.setOnTabChildClickListener(new TabView.OnTabChildClickListener() {
+            @Override
+            public void onTabChildClick(int position, ImageView imgView, TextView textView) {
+                BaseTabsBean tabBean=new BaseTabsBean();
+                if(tabViewChildList.get(position).getText().equals("待处理")){
+                    tabBean.setTabType(10);
+                    EventBus.getDefault().post(tabBean);
+                }
+                if(tabViewChildList.get(position).getText().equals("已同意")){
+                    tabBean.setTabType(20);
+                    EventBus.getDefault().post(tabBean);
+                }
+                if(tabViewChildList.get(position).getText().equals("已拒绝")){
+                    tabBean.setTabType(30);
+                    EventBus.getDefault().post(tabBean);
+                }
+                if(tabViewChildList.get(position).getText().equals("处理超时")){
+                    tabBean.setTabType(40);
+                    EventBus.getDefault().post(tabBean);
+                }
+            }
+        });
+
+        return view;
+    }
+}

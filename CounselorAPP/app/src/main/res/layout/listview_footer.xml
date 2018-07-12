@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.cesaas.android.counselor.order.widget.MyRefreshLayout
+        android:id="@+id/myrefresh"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/ll_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/rgb_0x000"
+            android:divider="@null" />
+    </com.cesaas.android.counselor.order.widget.MyRefreshLayout>
+
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="哇塞！没有数据了耶！"
+        android:visibility="gone" />
+
+</FrameLayout>

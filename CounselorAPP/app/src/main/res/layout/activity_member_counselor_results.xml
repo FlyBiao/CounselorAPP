@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/new_base_bg">
+        <include layout="@layout/base_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/new_base_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size_75"
+                        android:layout_height="@dimen/size_75"
+                        android:background="@mipmap/results_month_b"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_select_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1日"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/tv_select_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_16"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:orientation="horizontal">
+
+                    <com.jmavarez.materialcalendar.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="@dimen/size_260"
+                        android:layout_height="wrap_content"
+                        app:mc_color="@color/new_base_bg"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10"
+                android:background="@drawable/button_ellipse_grade_huise_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_10">
+
+                <LinearLayout
+                    android:id="@+id/ll_member_info"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_130"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/font_16"/>
+
+                    <TextView
+                        android:id="@+id/tv_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/new_base_bg"
+                        android:textSize="@dimen/font_14"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:gravity="center"
+                        android:text="本月"/>
+
+                </LinearLayout>
+
+                <View style="@style/common_shuli_divider_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/size_15"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="销售目标"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_month_sales_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/new_base_bg"
+                                android:textSize="@dimen/font_16"/>
+
+                            <TextView
+                                android:id="@+id/tv_month_complete_sales_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="挑战目标"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_month_surpass_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/new_base_bg"
+                                android:textSize="@dimen/font_16"/>
+
+                            <TextView
+                                android:id="@+id/tv_month_complete_surpass_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="会员目标"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_month_card_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/new_base_bg"
+                                android:textSize="@dimen/font_16"/>
+
+                            <TextView
+                                android:id="@+id/tv_month_complete_card_target"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10"
+                android:orientation="vertical"
+                android:padding="@dimen/size_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_15"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置"/>
+
+                    <TextView
+                        android:id="@+id/tv_set_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="月"/>
+
+                    <TextView
+                        android:id="@+id/tv_set_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日目标"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_sales_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:text=""/>
+
+                        <EditText
+                            android:id="@+id/et_sales"
+                            android:layout_width="@dimen/size_160"
+                            android:layout_height="35.0dip"
+                            android:background="@drawable/button_ellipse_grade_huise_bg"
+                            android:focusableInTouchMode="true"
+                            android:hint="销售目标"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/size_10"
+                            android:textColorHint="@color/black_de"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/font_14"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_surpass_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:text=""/>
+
+                        <EditText
+                            android:id="@+id/et_surpass"
+                            android:layout_width="@dimen/size_160"
+                            android:layout_height="35.0dip"
+                            android:background="@drawable/button_ellipse_grade_huise_bg"
+                            android:focusableInTouchMode="true"
+                            android:hint="挑战目标"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/size_10"
+                            android:textColorHint="@color/black_de"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/font_14"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_card_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_16"
+                            android:layout_marginRight="@dimen/size_5"
+                            android:text=""/>
+
+                        <EditText
+                            android:id="@+id/et_card"
+                            android:layout_width="@dimen/size_160"
+                            android:layout_height="35.0dip"
+                            android:background="@drawable/button_ellipse_grade_huise_bg"
+                            android:focusableInTouchMode="true"
+                            android:hint="开卡目标"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/size_10"
+                            android:textColorHint="@color/black_de"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/font_14"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/size_10"
+                android:paddingRight="@dimen/size_10">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_20"
+                    android:background="@drawable/bule_button_bg"
+                    android:paddingBottom="@dimen/size_8"
+                    android:paddingLeft="@dimen/size_20"
+                    android:paddingRight="@dimen/size_20"
+                    android:paddingTop="@dimen/size_8"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14"/>
+
+                <TextView
+                    android:id="@+id/tv_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_30"
+                    android:layout_toRightOf="@id/tv_cancel"
+                    android:background="@drawable/bule_button_bg"
+                    android:paddingBottom="@dimen/size_8"
+                    android:paddingLeft="@dimen/size_20"
+                    android:paddingRight="@dimen/size_20"
+                    android:paddingTop="@dimen/size_8"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

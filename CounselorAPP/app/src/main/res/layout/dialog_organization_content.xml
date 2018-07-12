@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/size_220"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/size_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_35"
+        android:text="选择机构"
+        android:gravity="center"/>
+    <View style="@style/common_divider_line"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_organization"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_200"/>
+
+</LinearLayout>
+
+</LinearLayout>

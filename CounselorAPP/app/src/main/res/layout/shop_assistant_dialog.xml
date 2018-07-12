@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:text="店员列表"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_18" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dcdcdc" />
+
+        <TextView
+            android:id="@+id/tv_001"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:text="陈皮德001"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_16" 
+            />
+        
+        <TextView
+            android:id="@+id/tv_002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="孙树002"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_16" 
+            />
+        
+        <TextView
+            android:id="@+id/tv_003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="陈莲山003"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_16" 
+            />
+        
+        <TextView
+            android:id="@+id/tv_004"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="莫海路004"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_16" 
+            />
+        
+        <TextView
+            android:id="@+id/tv_005"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="李泉丹005"
+            android:textColor="@color/rgb_000"
+            android:textSize="@dimen/font_16" 
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/size_18"
+            android:background="#dcdcdc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/two_button_layout"
+        android:layout_width="300dp"
+        android:background="@color/c5"
+        android:layout_height="47dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel_dialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/leftbottom_round_drawable"
+            android:gravity="center"
+            android:text="@string/cancels"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/font_18" />
+</LinearLayout>
+</LinearLayout>

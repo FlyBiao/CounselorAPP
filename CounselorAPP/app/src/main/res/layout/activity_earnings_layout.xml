@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_title_bar" >
+
+        <RadioGroup
+            android:id="@+id/rg_commision"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_commision1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rb_bg_01"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="推荐佣金"
+                android:textColor="@color/title_text_sel_white" />
+
+            <RadioButton
+                android:id="@+id/rbtn_commision2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rb_bg_02"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="发货佣金"
+                android:textColor="@color/title_text_sel_white" />
+            
+            
+        </RadioGroup>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="总收入:"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/tv_total_commsion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_total"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp" />
+
+            <!-- <TextView
+                android:id="@+id/tv_earnings_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:text="查看收入详情"
+                android:textSize="14sp" /> -->
+        </RelativeLayout>
+    
+    
+    <View
+            style="@style/common_divider_line"
+            android:layout_marginBottom="5dp" />
+    
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="0px"
+	    android:layout_weight="1"/>
+	<com.cesaas.android.counselor.order.widget.PieChartView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="0px"
+	    android:id="@+id/pie"
+	    android:layout_weight="2"/>
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="0px"
+	    android:layout_weight="1"/>
+	
+</LinearLayout>

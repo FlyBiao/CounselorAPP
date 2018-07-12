@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/commo_text_color"
+                android:gravity="center"
+                android:text="备注"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tv_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/commo_text_color"
+                android:gravity="center"
+                android:text="备注"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="商家名称："/>
+
+                <EditText
+                    android:id="@+id/et_merchant_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_session_bg"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入商家名"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/c1"
+                    android:textColorHint="@color/c3"
+                    android:paddingLeft="20dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="销售金额："/>
+
+                <EditText
+                    android:id="@+id/et_sales_amount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_session_bg"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入商家销售额（元）"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/c1"
+                    android:textColorHint="@color/c3"
+                    android:paddingLeft="20dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_85"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="其他说明："/>
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_session_bg"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入备注"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/c1"
+                    android:textColorHint="@color/c3"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14.0sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="16.0sp" />
+
+            <View
+                android:layout_width="@dimen/size_1"
+                android:layout_height="match_parent"
+                android:background="@color/white_pressed"/>
+
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/base_color"
+                android:textSize="16.0sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/stand_bg"
+    android:orientation="vertical" >
+    
+    
+    <LinearLayout
+        android:id="@+id/ll_tests"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/order_item_bg"
+        android:layout_margin="5dp"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ppts" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+            
+            <RelativeLayout 
+               android:layout_width="fill_parent"
+            	android:layout_height="wrap_content" >
+            	
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="双11活动内容"
+	                android:textSize="16sp" />
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@color/springgreen"
+	                android:layout_alignParentRight="true"
+	                android:text="NEW!"
+	                android:textSize="16sp" 
+	                android:visibility="gone"/>
+                
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="双11活动安排事项，各店铺做好准备！"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="2016.11.19"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/order_item_bg"
+        android:layout_margin="5dp"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pdfs" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout 
+               android:layout_width="fill_parent"
+            	android:layout_height="wrap_content" >
+            	
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="新店员培训"
+	                android:textSize="16sp" />
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@color/springgreen"
+	                android:layout_alignParentRight="true"
+	                android:text="NEW!"
+	                android:textSize="16sp" 
+	                android:visibility="gone"/>
+                
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="欢迎所有新店员！"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="2016.11.19"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/order_item_bg"
+        android:layout_margin="5dp"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wordsss" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout 
+               android:layout_width="fill_parent"
+            	android:layout_height="wrap_content" >
+            	
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="店铺会议事项"
+	                android:textSize="16sp" />
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@color/springgreen"
+	                android:layout_alignParentRight="true"
+	                android:text="NEW!"
+	                android:textSize="16sp" 
+	                android:visibility="gone"/>
+                
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="关于店铺陈列注意事项！"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="2016.11.19"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/order_item_bg"
+        android:layout_margin="5dp"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ies" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout 
+               android:layout_width="fill_parent"
+            	android:layout_height="wrap_content" >
+            	
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="双12工作事项"
+	                android:textSize="16sp" />
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="@color/springgreen"
+	                android:layout_alignParentRight="true"
+	                android:text="NEW!"
+	                android:textSize="16sp" 
+	                android:visibility="gone"/>
+                
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="双12即将到来，各位店铺员工请提前做好准备！"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c5"
+                android:paddingTop="5dp"
+                android:text="2016.11.19"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View style="@style/common_divider_line" />
+
+</LinearLayout>

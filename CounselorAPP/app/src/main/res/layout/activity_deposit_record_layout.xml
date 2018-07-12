@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_deposit_info"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/il_deposit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提现记录"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+	    <com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView
+	        android:id="@+id/refresh_deposit_and_load_more"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:cacheColorHint="#00000000"
+	        android:dividerHeight="1px"
+	        android:listSelector="#00000000" >
+	
+	        <com.cesaas.android.counselor.order.widget.LoadMoreListView
+	            android:id="@+id/load_more_deposit_list"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:cacheColorHint="#00000000"
+	            android:dividerHeight="1px"
+	            android:listSelector="#00000000" />
+	    </com.cesaas.android.counselor.order.widget.RefreshAndLoadMoreView>
+		<View
+			style="@style/common_divider_line"
+			android:paddingTop="@dimen/size_5"/>
+	</LinearLayout>
+</LinearLayout>

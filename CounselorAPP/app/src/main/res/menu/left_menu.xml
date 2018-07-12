@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_app_user_info"
+        android:title="个人信息"
+        android:icon="@mipmap/user_info"/>
+
+    <!--<item-->
+        <!--android:id="@+id/menu_app_task"-->
+        <!--android:title="店铺任务"-->
+        <!--android:icon="@mipmap/shop_task"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_app_daily"-->
+        <!--android:title="店铺日报"-->
+        <!--android:icon="@mipmap/setting"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_app_report"-->
+        <!--android:title="商品销售"-->
+        <!--android:icon="@mipmap/setting"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_app_setting"-->
+        <!--android:title="应用设置"-->
+        <!--android:icon="@mipmap/setting"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/menu_app_update"-->
+        <!--android:title="应用更新"-->
+        <!--android:icon="@mipmap/app_update"/>-->
+
+    <item
+        android:id="@+id/menu_app_exit"
+        android:title="退出登录"
+        android:icon="@mipmap/exit"/>
+
+</menu>

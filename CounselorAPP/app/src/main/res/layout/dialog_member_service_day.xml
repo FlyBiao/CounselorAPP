@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_200"
+        android:layout_marginTop="@dimen/size_20"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="选择时间"/>
+        <View style="@style/common_divider_line"
+              android:layout_marginTop="@dimen/size_10"/>
+        <TextView
+            android:id="@+id/tv_three_day"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:gravity="center"
+            android:text="最近三天"/>
+
+        <View style="@style/common_divider_line"
+              />
+        <TextView
+            android:id="@+id/tv_week"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:gravity="center"
+            android:text="一个星期"/>
+        <View style="@style/common_divider_line"
+              />
+        <TextView
+            android:id="@+id/tv_half_month"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:gravity="center"
+            android:text="半个月"/>
+        <View style="@style/common_divider_line"
+             />
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:gravity="center"
+            android:text="一个月"/>
+    </LinearLayout>
+
+</LinearLayout>

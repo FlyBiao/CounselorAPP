@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_8"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginRight="@dimen/size_8"
+        android:background="@drawable/user_btnbg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/d_camera_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/size_10"
+            android:text="相册"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/dc_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c6" />
+
+        <TextView
+            android:id="@+id/d_camera_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/size_10"
+            android:text="相机"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/font_16" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c6" />
+        <TextView
+            android:id="@+id/d_camera_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/size_10"
+            android:text="取消"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+    
+    <!-- <TextView
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_8"
+        android:background="@drawable/user_btnbg"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/c1"
+        android:textSize="@dimen/font_16" /> -->
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/day_sign_content_text_white_30"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_un_receive_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13dp"
+        android:orientation="vertical"
+        android:background="@drawable/order_item_bg"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_receive_user1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="下单人:" />
+
+            <TextView
+                android:id="@+id/tv_receive_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="flybiao"
+                android:layout_toRightOf="@id/tv_receive_user1" />
+
+
+            <ImageView
+                android:id="@+id/tv_huihua"
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:src="@mipmap/session"
+                android:layout_marginLeft="@dimen/size_6"/>
+
+            <TextView
+                android:id="@+id/tv_express"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自提"
+                android:paddingBottom="@dimen/size_5"
+                android:paddingLeft="@dimen/size_15"
+                android:paddingRight="@dimen/size_15"
+                android:paddingTop="@dimen/size_5"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:background="@drawable/button_ellipse_blue_bg"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp" >
+
+            <TextView
+                android:id="@+id/tv_order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_order_create_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_no"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_order_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View style="@style/common_divider_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ListView
+            android:id="@+id/list_order_things"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:visibility="visible"/>
+
+        <View style="@style/common_divider_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_marginLeft="@dimen/size_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="@dimen/size_10"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_send_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size_10"
+                    android:gravity="center"
+                    android:background="@drawable/button_receive_order_bg"
+                    android:text="我要抢单"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/size_10"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_not_huo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size_10"
+                    android:gravity="center"
+                    android:background="@drawable/button_give_receive_order_bg"
+                    android:text="放弃"
+                    android:textColor="@color/base_self_lift"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.haozhang.lib.SlantedTextView
+        android:id="@+id/slv_right_tri_express"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        app:slantedBackgroundColor="@color/base_logistics"
+        app:slantedMode="right_triangle"
+        app:slantedLength="@dimen/size_30"
+        app:slantedTextColor="@color/white"
+        app:slantedTextSize="14sp"
+        app:slantedText="物流"
+        android:layout_alignTop="@+id/ll_un_receive_order"
+        android:layout_alignEnd="@+id/ll_un_receive_order"
+        android:visibility="gone"/>
+
+    <com.haozhang.lib.SlantedTextView
+        android:id="@+id/slv_right_tri_self_lift"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        app:slantedBackgroundColor="@color/base_self_lift"
+        app:slantedMode="right_triangle"
+        app:slantedLength="@dimen/size_30"
+        app:slantedTextColor="@color/white"
+        app:slantedTextSize="14sp"
+        app:slantedText="自提"
+        android:layout_alignTop="@+id/ll_un_receive_order"
+        android:layout_alignEnd="@+id/ll_un_receive_order"
+        android:visibility="gone"/>
+
+</RelativeLayout>

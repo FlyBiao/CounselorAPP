@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/base_color">
+
+    <include layout="@layout/base_title"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/base_content_bg"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_10"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:text="店员设置"/>
+        </LinearLayout>
+
+        <View
+            style="@style/common_divider_line"/>
+
+        <Switch
+            android:id="@+id/sc_hide_audit_clerk"
+            android:layout_width="match_parent"
+            android:padding="@dimen/size_15"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hui"
+            android:text="隐藏待审核店员"/>
+
+        <View
+            style="@style/common_divider_line"
+            android:visibility="gone"/>
+
+        <Switch
+            android:id="@+id/sc_hide_dimission_clerk"
+            android:layout_width="match_parent"
+            android:padding="@dimen/size_15"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hui"
+            android:text="隐藏已离职店员"
+            android:visibility="gone"/>
+
+        <View
+            style="@style/common_divider_line"/>
+
+        <Switch
+            android:id="@+id/sc_hide_job_clerk"
+            android:layout_width="match_parent"
+            android:padding="@dimen/size_15"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hui"
+            android:text="隐藏在职店员"
+            android:visibility="gone"/>
+
+        <View
+            style="@style/common_divider_line"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

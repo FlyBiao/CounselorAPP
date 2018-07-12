@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_base_bg"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/rl_create_label"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_create_label_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新建标签"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout> 
+    
+    <LinearLayout 
+        android:layout_below="@id/rl_create_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@color/white">
+            
+            <TextView 
+                android:id="@+id/tv_labelname"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="标签名:"
+                />
+        
+        <com.cesaas.android.counselor.order.widget.MClearEditText
+            	android:id="@+id/et_tag_value"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tv_labelname"
+                android:paddingLeft="10dp"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:hint="输入标签名"
+                android:inputType="phone"
+                android:textColor="@color/c1"
+                android:textColorHint="@color/c3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+        <View 
+	        android:layout_height="0.5dip"
+	        android:layout_width="fill_parent"
+	        android:background="@color/c5"/>
+        
+        <ListView 
+	        android:id="@+id/lv_label_category_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:cacheColorHint="#00000000"
+	        android:divider="@color/rgb_line"
+	        android:dividerHeight="1px"
+	        android:listSelector="#00000000" ></ListView>
+        
+    </LinearLayout>
+    
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_sure_create_label"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_title_bar"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
